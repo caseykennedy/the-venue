@@ -11,7 +11,7 @@ import { graphql, Link, useStaticQuery } from 'gatsby'
 // import { readableColor } from 'polished'
 
 // Components
-import Logo from '../Logo'
+import Logo from '../logo'
 
 // Styles
 import { SideBarInner, Nav } from './styles.scss'
