@@ -75,7 +75,13 @@ Create a new `.tsx` file in the `src/pages` directory
 
 You can add other features by having a look at the official [plugins page](https://www.gatsbyjs.org/docs/plugins/)
 
-### Building your site
+### Editing the site
+
+```
+npm run dev
+```
+
+### Building the site
 
 ```
 npm run build

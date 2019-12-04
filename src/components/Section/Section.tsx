@@ -42,8 +42,8 @@ const Section: React.SFC<Props> = ({ children, bg, color, pt, pb }) => (
 Section.defaultProps = {
   bg: 'background',
   color: 'text',
-  pt: [3, 4, 5],
-  pb: [3, 4, 5]
+  pt: [4, 5, 6],
+  pb: [4, 5, 6]
 }
 
 // const PageWidth = styled(Box)`

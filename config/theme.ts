@@ -64,7 +64,7 @@ const theme: ThemeShape = {
   colors: {
     body: '#ffffff',
     text: '#ffffff',
-    background: '#151515',
+    background: '#000000',
     
     primary: '#000000',
     secondary: '#ffffff',
@@ -72,6 +72,7 @@ const theme: ThemeShape = {
 
     highlight: '#f5f6fb',
     accent: '#2d3a30',
+    sidebar: '#111111',
 
     black: '#000000',
     white: '#ffffff',
@@ -139,8 +140,8 @@ const theme: ThemeShape = {
   maxWidth: 1680,
 
   sidebarWidth: {
-    big: '320px',
-    normal: '300px',
+    big: '300px',
+    normal: '280px',
   },
 
   transition: {

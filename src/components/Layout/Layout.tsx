@@ -48,7 +48,7 @@ const Layout = ({ children }: LayoutProps) => {
         <Wrapper>
           <Sidebar color="black" />
           <Main>{children}</Main>
-          <Footer color="#FED2BC">
+          <Footer color="black">
             <Box p={[4]}>
               {/* Site by <a href="https://www.core37.agency">core37</a> */}
               All rights reserved

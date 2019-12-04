@@ -114,6 +114,7 @@ const Typography = css`
   a {
     transition: ${theme.transition.string};
     text-decoration: underline;
+    
     &:hover,
     &:focus {
       color: ${theme.colors.accent};

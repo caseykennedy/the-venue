@@ -26,11 +26,11 @@ import theme from '../../../config/theme'
 //////////////////////////////////////////////////////////////////////
 
 const defaultProps = {
-  color: 'black',
+  color: '#ffffff'
 }
 
 type Props = {
-  color: string
+  color?: string
 } & typeof defaultProps
 
 interface QueryResult {
@@ -68,14 +68,10 @@ const Sidebar: React.SFC<Props> = ({ color }) => {
           alignItems="flex-start"
         >
           {data.navigation.edges.map(({ node: item }) => (
-              <Link
-                to={item.link}
-                key={item.name}
-                activeClassName="nav--active"
-              >
-                {item.name}
-              </Link>
-            ))}
+            <Link to={item.link} key={item.name} activeClassName="nav--active">
+              {item.name}
+            </Link>
+          ))}
         </Nav>
       </Flex>
     </SideBarInner>
