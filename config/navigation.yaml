@@ -1,0 +1,8 @@
+- name: 'welcome'
+  link: '/'
+- name: 'amenities'
+  link: '/amenities'
+- name: 'gallery'
+  link: '/gallery'
+- name: 'inquiries'
+  link: '/inquiries'
