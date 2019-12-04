@@ -45,15 +45,7 @@ const IndexPage: React.SFC<Props> = () => {
             <Cell>
               <Box bg="black">
                 <ImgMatch
-                  src="brutalism-c.jpg"
-                  altText="PlayWell program state coordinator"
-                />
-              </Box>
-            </Cell>
-            <Cell>
-              <Box bg="black">
-                <ImgMatch
-                  src="brutalism-a.jpg"
+                  src="hero.jpg"
                   altText="PlayWell program state coordinator"
                 />
               </Box>
@@ -120,6 +112,26 @@ const IndexPage: React.SFC<Props> = () => {
             </Box>
           </Flex>
         </Section>
+        <Box as="section" px={theme.gutter} py={4}>
+          <Grid columns="repeat(auto-fit,minmax(120px,1fr))" gap="2rem">
+            <Cell>
+              <Box bg="magenta">
+                <ImgMatch
+                  src="brutalism-c.jpg"
+                  altText="PlayWell program state coordinator"
+                />
+              </Box>
+            </Cell>
+            <Cell>
+              <Box bg="black">
+                <ImgMatch
+                  src="hero.jpg"
+                  altText="PlayWell program state coordinator"
+                />
+              </Box>
+            </Cell>
+          </Grid>
+        </Box>
         <Box as="section" px={theme.gutter} py={4}>
           <Grid columns="repeat(auto-fit,minmax(120px,1fr))" gap="2rem">
             <Cell />

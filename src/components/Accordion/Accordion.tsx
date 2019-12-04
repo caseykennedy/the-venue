@@ -25,13 +25,6 @@ import theme from '../../../config/theme'
 // Begin Component
 //////////////////////////////////////////////////////////////////////
 
-const defaultProps = {
-  chevronColor: 'white',
-  color: 'white',
-  colorActive: 'white',
-  borderColor: 'white'
-}
-
 type Props = {
   children?: React.ReactNode
   title: string
@@ -40,6 +33,13 @@ type Props = {
   borderColor?: string
   colorActive?: string
 } & typeof defaultProps
+
+const defaultProps = {
+  chevronColor: 'white',
+  color: 'white',
+  colorActive: 'white',
+  borderColor: 'white'
+}
 
 interface QueryResult {
   navigation: {
