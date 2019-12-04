@@ -5,7 +5,7 @@ module.exports = {
   siteTitleAlt: 'The Venue at Tahoe | South Lake Tahoes grooviest event venue', // Alternative Site title for SEO
   siteTitleShort: 'The Venue at Tahoe', // short_name for manifest
   siteHeadline: 'South Lake Tahoes grooviest event venue', // Headline for schema.org JSONLD
-  siteUrl: '', // Domain of your site. No trailing slash!
+  siteUrl: 'https://lucid-swirles-e94cf1.netlify.com', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
   siteLogo: '/logos/logo.png', // Used for SEO and manifest
   siteDescription: 'South Lake Tahoes grooviest event venue and party space',
