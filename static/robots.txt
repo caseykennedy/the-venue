@@ -1,3 +1,3 @@
 User-agent: *
 
-sitemap: https://jodie.lekoarts.de/sitemap.xml
+sitemap: https://lucid-swirles-e94cf1.netlify.com/sitemap.xml
