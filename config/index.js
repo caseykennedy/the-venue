@@ -7,7 +7,7 @@ module.exports = {
   siteHeadline: 'South Lake Tahoes grooviest event venue', // Headline for schema.org JSONLD
   siteUrl: 'https://lucid-swirles-e94cf1.netlify.com', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
-  siteLogo: '/logos/logo.png', // Used for SEO and manifest
+  siteLogo: '/logos/hero.jpg', // Used for SEO and manifest
   siteDescription: 'South Lake Tahoes grooviest event venue and party space',
   author: 'Casey Kennedy', // Author for schema.org JSONLD
 

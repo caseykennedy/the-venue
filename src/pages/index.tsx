@@ -16,6 +16,7 @@ import Section from '../components/Section'
 import SEO from '../components/SEO'
 import Divider from '../components/Divider'
 import ImgMatch from '../components/ImgMatch'
+import Accordion from '../components/Accordion'
 
 // Elements
 import { AnimatedBox, Box, Flex, Heading, Text } from '../elements'
@@ -29,7 +30,7 @@ import theme from '../../config/theme'
 // Types
 interface Props {}
 
-const IndexPage: React.FunctionComponent<Props> = () => {
+const IndexPage: React.SFC<Props> = () => {
   const pageAnimation = useSpring({
     config: config.slow,
     from: { opacity: 0 },
@@ -70,6 +71,17 @@ const IndexPage: React.FunctionComponent<Props> = () => {
                 Half-sunken into the icy waters of Lindesnes, Under invites you
                 to dine five meters below the surface.
               </Text>
+              <Box width={1} mt={4}>
+                <Accordion title="Feature">
+                  <Box p={4} bg="#111111">Feature</Box>
+                </Accordion>
+                <Accordion title="Feature">
+                  <Box p={4}>Feature</Box>
+                </Accordion>
+                <Accordion title="Feature">
+                  <Box p={4}>Feature</Box>
+                </Accordion>
+              </Box>
             </Box>
           </Flex>
         </Section>
@@ -111,7 +123,7 @@ const IndexPage: React.FunctionComponent<Props> = () => {
         <Box as="section" px={theme.gutter} py={4}>
           <Grid columns="repeat(auto-fit,minmax(120px,1fr))" gap="2rem">
             <Cell />
-          <Cell>
+            <Cell>
               <Box bg="black">
                 <ImgMatch
                   src="brutalism-c.jpg"
