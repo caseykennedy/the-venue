@@ -1,4 +1,5 @@
-// useDocumentScrollThrottled utility function
+// useScrollWatch utility function
+// Checks for window scroll position with throttling
 
 // Imports
 //////////////////////////////////////////////////////////////////////
@@ -10,7 +11,7 @@ import { throttle } from 'lodash'
 // Begin
 //////////////////////////////////////////////////////////////////////
 
-function useDocumentScrollThrottled(callback: any) {
+function useScrollWatch(callback: any) {
   const [, setScrollPosition] = useState(0)
   let previousScrollTop = 0
 
@@ -36,7 +37,7 @@ function useDocumentScrollThrottled(callback: any) {
   }, [])
 }
 
-export default useDocumentScrollThrottled
+export default useScrollWatch
 
 //////////////////////////////////////////////////////////////////////
 // End

@@ -66,13 +66,13 @@ const theme: ThemeShape = {
     text: '#ffffff',
     background: '#000000',
     
-    primary: '#000000',
+    primary: '#FED2BC',
     secondary: '#ffffff',
     tertiary: '#ebebeb',
 
     highlight: '#f5f6fb',
     accent: '#2d3a30',
-    sidebar: '#111111',
+    sidebar: '#000000',
 
     black: '#000000',
     white: '#ffffff',

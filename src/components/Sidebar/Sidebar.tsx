@@ -1,4 +1,5 @@
 // Sidebar:
+// Main site navigation
 
 // Imports
 //////////////////////////////////////////////////////////////////////
@@ -11,19 +12,19 @@ import { graphql, Link, useStaticQuery } from 'gatsby'
 // import { readableColor } from 'polished'
 
 // Utilities
-import useDocumentScrollThrottled from '../../utils/useDocumentScrollThrottled'
+import useScrollWatch from '../../utils/useScrollWatch'
 
 // Components
 import Logo from '../logo'
 
-// Styles
-import { SideBarInner, Nav } from './styles.scss'
-
 // Elements
 import { Box, Flex } from '../../elements'
 
-// Config
+// Theme
 import theme from '../../../config/theme'
+
+// Styles
+import { SideBarInner, Nav } from './styles.scss'
 
 // Begin Component
 //////////////////////////////////////////////////////////////////////
@@ -61,12 +62,12 @@ const Sidebar: React.SFC<Props> = ({ color }) => {
   const [shouldHideHeader, setShouldHideHeader] = useState(false);
   const [shouldShowBackground, setShouldShowBackground] = useState(false);
 
-  // Initial scroll settings
+  // Scroll settings
   const MINIMUM_SCROLL = 80;
   const TIMEOUT_DELAY = 400;
 
   // Scroll watch
-  useDocumentScrollThrottled((callbackData: CallbackTypes) => {
+  useScrollWatch((callbackData: CallbackTypes) => {
     const { previousScrollTop, currentScrollTop } = callbackData;
     const isScrolledDown = previousScrollTop < currentScrollTop;
     const isMinimumScrolled = currentScrollTop > MINIMUM_SCROLL;
@@ -79,7 +80,7 @@ const Sidebar: React.SFC<Props> = ({ color }) => {
   });
   
   // Scroll state styles
-  const backgroundStyle = shouldShowBackground ? 'magenta' : 'transparent';
+  const backgroundStyle = shouldShowBackground ? theme.colors.sidebar : 'transparent';
   const hiddenStyle = shouldHideHeader ? 'hidden' : '';
   return (
     <SideBarInner bg={backgroundStyle} as="aside" p={[4]}>

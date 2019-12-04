@@ -16,15 +16,17 @@ import Sidebar from '../Sidebar'
 // import Footer from './Footer'
 
 // Styles
-import { Wrapper, Main, Footer } from './styles.scss';
+import { Wrapper, Main, Footer } from './styles.scss'
 
 // Elements
-import { Box, Flex } from '../../elements'
+import { Box, Flex, Text } from '../../elements'
 
 // Begin
 //////////////////////////////////////////////////////////////////////
 
-
+const Year = () => {
+  return new Date().getFullYear()
+}
 
 // interface RenderData {
 //   site: {
@@ -51,7 +53,7 @@ const Layout = ({ children }: LayoutProps) => {
           <Footer color="black">
             <Box p={[4]}>
               {/* Site by <a href="https://www.core37.agency">core37</a> */}
-              All rights reserved
+              <Text fontSize={[1, 1, `calc(${theme.fontSizes[1]} / 1.5)`]}>&copy; {Year()}</Text>
             </Box>
           </Footer>
         </Wrapper>

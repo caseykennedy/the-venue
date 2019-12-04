@@ -4,7 +4,7 @@
 //////////////////////////////////////////////////////////////////////
 
 // Core
-import styled from 'styled-components';
+import styled from 'styled-components'
 import { readableColor } from 'polished'
 
 // Constants
@@ -34,6 +34,9 @@ export const SideBarInner = styled(Box)<{ bg: string }>`
   }
   svg {
     fill: ${props => readableColor(`${props.bg}`)};
+  }
+  &.hidden {
+    transform: translateY(-110%);
   }
 `
 

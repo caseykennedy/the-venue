@@ -5,8 +5,6 @@
 
 // Core
 import React from 'react'
-
-// Libraries
 import { animated, useSpring, config } from 'react-spring'
 import { Grid, Cell } from 'styled-css-grid'
 
@@ -17,6 +15,7 @@ import SEO from '../components/SEO'
 import Divider from '../components/Divider'
 import ImgMatch from '../components/ImgMatch'
 import Accordion from '../components/Accordion'
+import Hero from '../components/Hero'
 
 // Elements
 import { AnimatedBox, Box, Flex, Heading, Text } from '../elements'
@@ -26,6 +25,12 @@ import theme from '../../config/theme'
 
 // Begin
 //////////////////////////////////////////////////////////////////////
+
+// Hero Slides
+const heroSlides = [
+  { src: 'hero.jpg', altText: 'The Venue at Tahoe event space.' },
+  { src: 'brutalism-a.jpg', altText: 'The Venue at Tahoe event space.' }
+]
 
 // Types
 interface Props {}
@@ -40,18 +45,7 @@ const IndexPage: React.SFC<Props> = () => {
     <Layout>
       <SEO />
       <AnimatedBox style={pageAnimation}>
-        <Box as="section" px={theme.gutter} py={4}>
-          <Grid columns="repeat(auto-fit,minmax(120px,1fr))" gap="2rem">
-            <Cell>
-              <Box bg="black">
-                <ImgMatch
-                  src="hero.jpg"
-                  altText="PlayWell program state coordinator"
-                />
-              </Box>
-            </Cell>
-          </Grid>
-        </Box>
+        <Hero slides={heroSlides} />
         <Section>
           <Flex justifyContent="flex-end">
             <Box width={[1, 1, 2 / 3]} pr={[2, 4, 5]}>
@@ -65,7 +59,9 @@ const IndexPage: React.SFC<Props> = () => {
               </Text>
               <Box width={1} mt={4}>
                 <Accordion title="Feature">
-                  <Box p={4} bg="#111111">Feature</Box>
+                  <Box p={4} bg="#111111">
+                    Feature
+                  </Box>
                 </Accordion>
                 <Accordion title="Feature">
                   <Box p={4}>Feature</Box>
@@ -146,7 +142,7 @@ const IndexPage: React.SFC<Props> = () => {
             <Cell />
           </Grid>
         </Box>
-        <Divider bg={['magenta', 'blue', 'yellow']} py={'6vh'} />
+        <Divider bg={['magenta', 'blue', 'primary']} py={'6vh'} />
       </AnimatedBox>
     </Layout>
   )
