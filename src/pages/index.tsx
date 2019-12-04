@@ -15,7 +15,7 @@ import Layout from '../components/Layout'
 import Section from '../components/Section'
 import SEO from '../components/SEO'
 import Divider from '../components/Divider'
-// import ImgMatch from '../components/ImgMatch'
+import ImgMatch from '../components/ImgMatch'
 
 // Elements
 import { AnimatedBox, Box, Flex, Heading, Text } from '../elements'
@@ -43,18 +43,18 @@ const IndexPage: React.FunctionComponent<Props> = () => {
           <Grid columns="repeat(auto-fit,minmax(120px,1fr))" gap="2rem">
             <Cell>
               <Box bg="black">
-                {/* <ImgMatch
+                <ImgMatch
                   src="brutalism-c.jpg"
                   altText="PlayWell program state coordinator"
-                /> */}
+                />
               </Box>
             </Cell>
             <Cell>
               <Box bg="black">
-                {/* <ImgMatch
+                <ImgMatch
                   src="brutalism-a.jpg"
                   altText="PlayWell program state coordinator"
-                /> */}
+                />
               </Box>
             </Cell>
           </Grid>
@@ -83,10 +83,10 @@ const IndexPage: React.FunctionComponent<Props> = () => {
           <Grid columns="repeat(auto-fit,minmax(120px,1fr))" gap="2rem">
             <Cell>
               <Box bg="black">
-                {/* <ImgMatch
+                <ImgMatch
                   src="brutalism-a.jpg"
                   altText="PlayWell program state coordinator"
-                /> */}
+                />
               </Box>
             </Cell>
             <Cell />
@@ -113,10 +113,10 @@ const IndexPage: React.FunctionComponent<Props> = () => {
             <Cell />
           <Cell>
               <Box bg="black">
-                {/* <ImgMatch
+                <ImgMatch
                   src="brutalism-c.jpg"
                   altText="PlayWell program state coordinator"
-                /> */}
+                />
               </Box>
             </Cell>
             <Cell />
