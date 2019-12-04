@@ -1,4 +1,4 @@
-# core__37 Gatsby Starter
+# The Venue at Tahoe Marketing Website
 
 ## Features
 
@@ -35,14 +35,6 @@ Check your development environment! You'll need [Node.js](https://nodejs.org/en/
 - [Gatsby on Windows](https://www.gatsbyjs.org/docs/gatsby-on-windows/)
 - [Check your development environment](https://www.gatsbyjs.org/tutorial/part-zero/)
 
-To copy and install this starter run this command (with "project-name" being the name of your folder you wish to install it in):
-
-```
-gatsby new project-name https://github.com/LekoArts/gatsby-starter-portfolio-jodie
-cd project-name
-npm run develop
-```
-
 ### Configuring the Instagram source plugin
 
 1. You need to have a Facebook page (I know... :/)
@@ -75,11 +67,6 @@ ACCESS_TOKEN=YOUR_TOKEN
 
 You can paste your access token and Business ID there.
 
-### Adding a new project
-
-1. Create a new folder in `content/projects` and place your images there
-1. Add your project to the `content/projects/projects.yaml` file
-
 ### Adding a new page
 
 Create a new `.tsx` file in the `src/pages` directory
@@ -97,20 +84,20 @@ Copy the content of the `public` folder to your webhost or use a website like Ne
 
 ## Configuration
 
-You can configure your setup in `config/index.js`:
+You can configure the setup in `config/index.js`:
 
 ```JS
 module.exports = {
   pathPrefix: '/', // Prefix for all links. If you deploy your site to example.com/portfolio your pathPrefix should be "portfolio"
 
-  siteTitle: 'core37', // Navigation and Site Title
-  siteTitleAlt: 'core37 | Gatsby TypeScript Starter with Styled System', // Alternative Site title for SEO
-  siteTitleShort: 'core37', // short_name for manifest
-  siteHeadline: 'Gatsby TypeScript Starter with Styled System', // Headline for schema.org JSONLD
+  siteTitle: 'The Venue', // Navigation and Site Title
+  siteTitleAlt: 'The Venue at Tahoe | South Lake Tahoes grooviest event venue', // Alternative Site title for SEO
+  siteTitleShort: 'The Venue at Tahoe', // short_name for manifest
+  siteHeadline: 'South Lake Tahoes grooviest event venue', // Headline for schema.org JSONLD
   siteUrl: '', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
   siteLogo: '/logos/logo.png', // Used for SEO and manifest
-  siteDescription: 'Gatsby TypeScript Starter with Styled System',
+  siteDescription: 'South Lake Tahoes grooviest event venue and party space',
   author: 'Casey Kennedy', // Author for schema.org JSONLD
 
   // siteFBAppID: '123456789', // Facebook App ID - Optional
@@ -120,7 +107,7 @@ module.exports = {
   googleAnalyticsID: 'UA-XXXXXX-X',
 
   // Manifest and Progress color
-  themeColor: '#ffffff',
+  themeColor: '#FED2BC',
   backgroundColor: '#000000'
 }
 ```
@@ -181,8 +168,6 @@ const theme: ThemeShape = {
 
 export default theme
 ```
-
-**Attention:** You also need to edit `static/robots.txt` to include your domain!
 
 [gae]: https://developers.facebook.com/tools/explorer/
 [atd]: https://developers.facebook.com/tools/debug/accesstoken/
