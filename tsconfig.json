@@ -1,6 +1,11 @@
 {
   "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["*"] // resolve all modules prefixed with `@/` from `src` directory
+    },
     "module": "commonjs",
+    "moduleResolution": "node",
     "target": "esnext",
     "jsx": "preserve",
     "lib": ["dom", "es2015", "es2017"],
@@ -12,8 +17,10 @@
     "noUnusedLocals": false,
     "noUnusedParameters": true,
     "removeComments": false,
-    "preserveConstEnums": true,
-    "moduleResolution": "node"
+    "preserveConstEnums": true
   },
+  "exclude": [
+    "node_modules"
+  ],
   "include": ["./src/**/*", "./cypress/**/*"]
 }

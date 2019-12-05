@@ -10,6 +10,7 @@
     "dev": "gatsby develop -o",
     "start": "npm run develop",
     "serve": "gatsby serve",
+    "ssr": "gatsby build && gatsby serve",
     "lint": "tslint -t stylish -p tsconfig.json",
     "lint:fix": "tslint -p tsconfig.json -t stylish --fix",
     "format": "prettier --write content/**/*.yaml",
