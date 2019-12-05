@@ -56,7 +56,7 @@ const IndexPage: React.SFC<Props> = () => {
               </Heading>
               <Text as="p">
                 Half-sunken into the icy waters of Lindesnes, Under invites you
-                to dine five meters below the surface.
+                to dine five meters below the surface..
               </Text>
             </Box>
           </Flex>
