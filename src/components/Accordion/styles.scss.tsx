@@ -7,6 +7,8 @@
 import styled from 'styled-components'
 import { readableColor } from 'polished'
 
+import { Icon } from '../Icons'
+
 // Constants
 import theme from '../../../config/theme'
 
@@ -28,15 +30,6 @@ export const AccordionContainer = styled.div`
     .rotate {
       transform: rotate(90deg);
     }
-  }
-
-  .accordion__icon {
-    margin-left: auto;
-    transition: transform 0.3s ease;
-
-    /* svg {
-      fill: ${p => p.chevronColor};
-    } */
   }
 `
 
@@ -66,8 +59,16 @@ export const AccordionContent = styled(Box)<{ borderColor: string }>`
   border-bottom: 1px solid ${p => p.borderColor};
 
   .accordion-content__inner {
-    border-radius: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: ${theme.space[4]};
+  }
+`
+
+export const Carat = styled(Icon)<{ chevronColor: string }>`
+  margin-left: auto;
+  transition: transform 0.3s ease;
+
+  svg {
+    fill: ${p => p.chevronColor};
   }
 `
 

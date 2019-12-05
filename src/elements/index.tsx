@@ -21,6 +21,7 @@ import {
   alignItems,
   justifyContent,
   textAlign,
+  fontFamily,
   fontSize,
   fontWeight,
   lineHeight,
@@ -38,13 +39,15 @@ import {
   AlignItemsProps,
   JustifyContentProps,
   TextAlignProps,
+  FontFamilyProps,
   FontSizeProps,
   FontWeightProps,
   LineHeightProps,
   MaxWidthProps,
   DisplayProps, 
   PositionProps,
-  OverflowProps
+  OverflowProps,
+  
 } from 'styled-system'
 
 // Begin Component
@@ -58,6 +61,7 @@ type ElementProps = SpaceProps &
   FlexProps &
   AlignSelfProps &
   TextAlignProps &
+  FontFamilyProps &
   FontSizeProps &
   MaxWidthProps &
   DisplayProps &
@@ -169,6 +173,7 @@ export const Heading = styled.div<ElementProps>`
   ${space}
   ${color}
   ${textAlign}
+  ${fontFamily}
   ${fontSize}
   ${fontWeight}
   ${lineHeight}
@@ -185,6 +190,7 @@ export const Text = styled.div<ElementProps>`
   ${space}
   ${color}
   ${textAlign}
+  ${fontFamily}
   ${fontSize}
   ${fontWeight}
   ${lineHeight}

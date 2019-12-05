@@ -19,22 +19,29 @@ import { Box, Flex } from '../../elements'
 export const SideBarInner = styled(Box)<{ bg: string }>`
   position: fixed;
   height: 100%;
-  width: ${props => props.theme.sidebarWidth.big};
+  width: ${p => p.theme.sidebarWidth.big};
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-between;
-  background: ${props => props.bg};
-  @media (max-width: ${props => props.theme.breakpoints[4]}) {
-    width: ${props => props.theme.sidebarWidth.normal};
+  background: ${p => p.bg};
+
+  @media (max-width: ${p => p.theme.breakpoints[4]}) {
+    width: ${p => p.theme.sidebarWidth.normal};
   }
-  @media (max-width: ${props => props.theme.breakpoints[2]}) {
+
+  @media (max-width: ${p => p.theme.breakpoints[2]}) {
     position: relative;
     width: 100%;
   }
-  svg {
-    fill: ${props => readableColor(`${props.bg}`)};
+
+  .logo {
+    svg {
+      fill: ${props => readableColor(`${props.bg}`)};
+      width: calc(${theme.root.size});
+    }
   }
+
   &.hidden {
     transform: translateY(-110%);
   }
@@ -44,24 +51,24 @@ export const Nav = styled(Flex)<{ color: string }>`
   a {
     text-decoration: none;
     color: ${props => readableColor(`${props.color}`)};
-    font-size: ${props => props.theme.fontSizes[3]};
+    font-size: ${p => p.theme.fontSizes[3]};
     line-height: 1.5;
     &:hover,
     &:focus,
     &.navlink-active {
-      color: ${props => props.theme.colors.primary};
+      color: ${p => p.theme.colors.primary};
     }
-    @media (max-width: ${props => props.theme.breakpoints[2]}) {
-      font-size: ${props => props.theme.fontSizes[2]};
-      margin-left: ${props => props.theme.space[4]};
+    @media (max-width: ${p => p.theme.breakpoints[2]}) {
+      font-size: ${p => p.theme.fontSizes[2]};
+      margin-left: ${p => p.theme.space[4]};
     }
-    @media (max-width: ${props => props.theme.breakpoints[1]}) {
-      font-size: ${props => props.theme.fontSizes[1]};
-      margin-left: ${props => props.theme.space[3]};
+    @media (max-width: ${p => p.theme.breakpoints[1]}) {
+      font-size: ${p => p.theme.fontSizes[1]};
+      margin-left: ${p => p.theme.space[3]};
     }
-    @media (max-width: ${props => props.theme.breakpoints[0]}) {
-      font-size: ${props => props.theme.fontSizes[0]};
-      margin-left: ${props => props.theme.space[2]};
+    @media (max-width: ${p => p.theme.breakpoints[0]}) {
+      font-size: ${p => p.theme.fontSizes[0]};
+      margin-left: ${p => p.theme.space[2]};
     }
   }
 `

@@ -90,8 +90,8 @@ const Sidebar: React.SFC<Props> = ({ color }) => {
         alignItems={['center', 'center', 'center', 'flex-start']}
         justifyContent="space-between"
       >
-        <Box width={['3rem', '4rem', '5rem', '6rem']}>
-          <Link to="/" aria-label="LekoArts, Back to Home">
+        <Box width={1} mt={4} className="logo">
+          <Link to="/" aria-label="The Venue, Back to Home">
             <Logo />
           </Link>
         </Box>

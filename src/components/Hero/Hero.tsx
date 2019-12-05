@@ -47,7 +47,7 @@ const Hero: React.SFC<Props> = ({ slides }) => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 6000,
-    adaptiveHeight: true
+    adaptiveHeight: false
   }
   return (
     <HeroContainer>
@@ -57,7 +57,7 @@ const Hero: React.SFC<Props> = ({ slides }) => {
             {slides.map((slide, index) => (
               <Box key={index}>
                 <ImgMatch src={slide.src} altText={slide.altText} />
-                <Box mt={3}>
+                {/* <Box mt={3}>
                   <Icon
                     name="carat"
                     color={theme.colors.primary}
@@ -68,7 +68,7 @@ const Hero: React.SFC<Props> = ({ slides }) => {
                     color={theme.colors.primary}
                     className="arrow-next"
                   />
-                </Box>
+                </Box> */}
               </Box>
             ))}
           </Slider>

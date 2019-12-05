@@ -26,12 +26,6 @@ import theme from '../../config/theme'
 // Begin
 //////////////////////////////////////////////////////////////////////
 
-// Hero Slides
-const heroSlides = [
-  { src: 'hero.jpg', altText: 'The Venue at Tahoe event space.' },
-  { src: 'brutalism-a.jpg', altText: 'The Venue at Tahoe event space.' }
-]
-
 // Types
 interface Props {}
 
@@ -48,28 +42,15 @@ const IndexPage: React.SFC<Props> = () => {
         <Hero slides={heroSlides} />
         <Section>
           <Flex justifyContent="flex-end">
-            <Box width={[1, 1, 2 / 3]} pr={[2, 4, 5]}>
-              <Heading as="h1" fontSize={[3, 4, 4]}>
+            <Box width={[1, 1, 1 / 2]}>
+              <Heading as="h1">
                 A restaurant five and a half meters below the surface in Norway,
                 exposing you to the wonders beneath the sea.
               </Heading>
-              <Text>
+              <Text as="p">
                 Half-sunken into the icy waters of Lindesnes, Under invites you
                 to dine five meters below the surface.
               </Text>
-              <Box width={1} mt={4}>
-                <Accordion title="Feature">
-                  <Box p={4} bg="#111111">
-                    Feature
-                  </Box>
-                </Accordion>
-                <Accordion title="Feature">
-                  <Box p={4}>Feature</Box>
-                </Accordion>
-                <Accordion title="Feature">
-                  <Box p={4}>Feature</Box>
-                </Accordion>
-              </Box>
             </Box>
           </Flex>
         </Section>
@@ -80,7 +61,10 @@ const IndexPage: React.SFC<Props> = () => {
           />
         </Box> */}
         <Box as="section" px={theme.gutter} py={4}>
-          <Grid columns="repeat(auto-fit,minmax(120px,1fr))" gap="2rem">
+          <Grid
+            columns="repeat(auto-fit,minmax(120px,1fr))"
+            gap={theme.space[4]}
+          >
             <Cell>
               <Box bg="black">
                 <ImgMatch
@@ -95,21 +79,62 @@ const IndexPage: React.SFC<Props> = () => {
         </Box>
         <Section>
           <Flex justifyContent="flex-end">
-            <Box width={[1, 1, 2 / 3]} pr={[2, 4, 5]}>
-              <Heading as="h1" fontSize={[3, 4, 4]}>
+            <Box width={[1, 1, 1 / 2]}>
+              <Heading as="h1">
                 The perfect space for your event. The Venue is a bit of modern
                 with a lot of class — our staff are friendly and attentive to
                 your needs.
               </Heading>
-              <Text>
-                Half-sunken into the icy waters of Lindesnes, Under invites you
-                to dine five meters below the surface.
-              </Text>
+              <Box width={1} mt={4}>
+                {accordionData.map((item, index) => (
+                  <Accordion title={item.title} key={index}>
+                    <Box pt={3}>{item.body}</Box>
+                  </Accordion>
+                ))}
+              </Box>
             </Box>
           </Flex>
         </Section>
+        {/* <Divider bg={['magenta', 'blue', 'primary']} py={'6vh'} /> */}
         <Box as="section" px={theme.gutter} py={4}>
-          <Grid columns="repeat(auto-fit,minmax(120px,1fr))" gap="2rem">
+          <Grid
+            columns="repeat(auto-fit,minmax(120px,1fr))"
+            gap={theme.space[4]}
+          >
+            <Cell />
+            <Cell>
+              <Box bg="black">
+                <ImgMatch
+                  src="brutalism-c.jpg"
+                  altText="PlayWell program state coordinator"
+                />
+              </Box>
+            </Cell>
+            <Cell />
+          </Grid>
+        </Box>
+        <Section>
+          <Box width={[1, 1, 1 / 2]}>
+            <Heading as="h1">We happily offer the following amenities:</Heading>
+          </Box>
+          <Box width={[1, 1, 1 / 2]}>
+            <ul>
+              <li>Fridge freezer</li>
+              <li>Full prep kitchen </li>
+              <li>Ice Machine</li>
+              <li>Two well bars</li>
+              <li>Furniture and tables</li>
+              <li>JBL EOS sound system</li>
+              <li>Party Lighting</li>
+              <li>Glassware</li>
+            </ul>
+          </Box>
+        </Section>
+        <Box as="section" px={theme.gutter} py={4}>
+          <Grid
+            columns="repeat(auto-fit,minmax(120px,1fr))"
+            gap={theme.space[4]}
+          >
             <Cell>
               <Box bg="magenta">
                 <ImgMatch
@@ -128,27 +153,37 @@ const IndexPage: React.SFC<Props> = () => {
             </Cell>
           </Grid>
         </Box>
-        <Box as="section" px={theme.gutter} py={4}>
-          <Grid columns="repeat(auto-fit,minmax(120px,1fr))" gap="2rem">
-            <Cell />
-            <Cell>
-              <Box bg="black">
-                <ImgMatch
-                  src="brutalism-c.jpg"
-                  altText="PlayWell program state coordinator"
-                />
-              </Box>
-            </Cell>
-            <Cell />
-          </Grid>
-        </Box>
-        <Divider bg={['magenta', 'blue', 'primary']} py={'6vh'} />
       </AnimatedBox>
     </Layout>
   )
 }
 
 export default IndexPage
+
+// Hero Slides
+const heroSlides = [
+  { src: 'hero.jpg', altText: 'The Venue at Tahoe event space.' },
+  { src: 'hero--b.jpg', altText: 'The Venue at Tahoe event space.' }
+]
+
+// Accordion
+const accordionData = [
+  {
+    title: 'Private Events',
+    body:
+      'The Venue at Tahoe event space. A restaurant five and a half meters below the surface in Norway, exposing you to the wonders beneath the sea.'
+  },
+  {
+    title: 'Receptions',
+    body:
+      'The Venue at Tahoe event space. A restaurant five and a half meters below the surface in Norway, exposing you to the wonders beneath the sea.'
+  },
+  {
+    title: 'Gatherings',
+    body:
+      'The Venue at Tahoe event space. A restaurant five and a half meters below the surface in Norway, exposing you to the wonders beneath the sea.'
+  }
+]
 
 //////////////////////////////////////////////////////////////////////
 // End

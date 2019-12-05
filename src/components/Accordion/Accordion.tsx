@@ -14,10 +14,10 @@ import { graphql, Link, useStaticQuery } from 'gatsby'
 import Logo from '../logo'
 
 // Styles
-import { AccordionContainer, AccordionToggle, AccordionContent } from './styles.scss'
+import { AccordionContainer, AccordionToggle, AccordionContent, Carat } from './styles.scss'
 
 // Elements
-import { Box, Flex, Text } from '../../elements'
+import { Box, Flex, Text, Heading } from '../../elements'
 
 // Config
 import theme from '../../../config/theme'
@@ -35,10 +35,10 @@ type Props = {
 } & typeof defaultProps
 
 const defaultProps = {
-  chevronColor: 'white',
-  color: 'white',
-  colorActive: 'white',
-  borderColor: 'white'
+  chevronColor: theme.colors.white,
+  color: theme.colors.white,
+  colorActive: theme.colors.white,
+  borderColor: theme.colors.white
 }
 
 interface QueryResult {
@@ -87,14 +87,14 @@ const Accordion: React.SFC<Props> = ({
           color={color}
           colorActive={colorActive}
         >
-          <Text as="span" fontWeight={500} fontSize="1.6rem">
+          <Heading as="span" fontFamily="heading" fontSize={4} pt={1} pb={2}>
             {title}
-          </Text>
-          {/* <AccordionContainer.Icon
-            Name="carat"
+          </Heading>
+          <Carat
+            name="carat"
             className={`${setRotate}`}
             chevronColor={chevronColor}
-          /> */}
+          />
         </AccordionToggle>
         <AccordionContent
           ref={content}

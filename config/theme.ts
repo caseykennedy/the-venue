@@ -31,6 +31,7 @@ interface ThemeShape {
     [key: string]: string
   }
   root: {
+    size: string
     font: {
       [key: string]: string
     }
@@ -41,7 +42,7 @@ interface ThemeShape {
 //////////////////////////////////////////////////////////////////////
 
 const breakpoints: string[] = ['376px', '769px', '1025px']
-// aliases - FUTURE ENHANCEMENT
+// Aliases - FUTURE ENHANCEMENT
 // breakpoints.xs = breakpoints[0];
 // breakpoints.sm = breakpoints[1];
 // breakpoints.md = breakpoints[2];
@@ -71,7 +72,7 @@ const theme: ThemeShape = {
     tertiary: '#ebebeb',
 
     highlight: '#f5f6fb',
-    accent: '#2d3a30',
+    accent: '#FED2BC',
     sidebar: '#000000',
 
     black: '#000000',
@@ -95,6 +96,7 @@ const theme: ThemeShape = {
     '0.25rem', // 1
     '0.5rem', // 2
     '1rem', // 3
+    '1.5rem', // 3
     '2rem', // 4
     '4rem', // 5
     '8rem', // 6
@@ -111,14 +113,14 @@ const theme: ThemeShape = {
 
   fonts: {
     body: `"Aeonik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
-    heading: `"inherit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
+    heading: `"AktivReg", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
     code: `"Menlo", Consolas, "Liberation Mono", Menlo, Courier, monospace`
   },
 
   fontSizes: [
     'var(--text-xs)',
-    'var(--text-base-size)',
     'var(--text-sm)',
+    'var(--text-base-size)',
     'var(--text-md)',
     'var(--text-lg)',
     'var(--text-xl)',
@@ -149,6 +151,7 @@ const theme: ThemeShape = {
   },
 
   root: {
+    size: 'var(--root-size)',
     font: {
       // Base sizing
       baseSize: 'var(--text-base-size)',

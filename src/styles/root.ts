@@ -14,6 +14,8 @@ import theme from '../../config/theme'
 
 const RootVariables = css`
   :root {
+    --root-size: 6rem;
+
     /* -------------------------------- 
     Typography
     -------------------------------- */
@@ -37,13 +39,14 @@ const RootVariables = css`
     --text-xxxl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
 
     /* line-height */
-    --heading-line-height: 1.45;
+    --heading-line-height: 1.25;
     --body-line-height: 1.45;
   }
 
   ${theme.mq.medium} {
     :root {
-      --text-base-size: 1.25em;
+      --root-size: 8rem;
+      --text-base-size: 1.125em;
     }
   }
 `

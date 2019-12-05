@@ -26,7 +26,7 @@ export const Icon = ({ name, className, color, fas }) => {
   switch (name) {
     case 'carat':
       return (
-        <IconStyle color={color}>
+        <IconStyle color={color} className={className}>
           <Carat />
         </IconStyle>
       )

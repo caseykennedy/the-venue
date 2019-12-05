@@ -15,6 +15,12 @@ import AeonikRegularWoff2 from './fonts/AeonikRegular.woff2'
 import AeonikRegularWoff from './fonts/AeonikRegular.woff'
 import AeonikRegularOtf from './fonts/AeonikRegular.otf'
 
+// Aktiv Grotesk Condensed Regular
+import AktivGroteskRegEot from './fonts/AktivGroteskCdRg.eot'
+import AktivGroteskRegWoff2 from './fonts/AktivGroteskCdRg.woff2'
+import AktivGroteskRegWoff from './fonts/AktivGroteskCdRg.woff'
+import AktivGroteskRegOtf from './fonts/AktivGroteskCdRg.otf'
+
 // Begin
 //////////////////////////////////////////////////////////////////////
 
@@ -26,6 +32,17 @@ const Typography = css`
       url(${AeonikRegularWoff}) format('woff'),
       url(${AeonikRegularOtf}) format('opentype'),
       url(${AeonikRegularEot}?#iefix) format('embedded-opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'AktivReg';
+    src: url(${AktivGroteskRegEot});
+    src: url(${AktivGroteskRegWoff2}) format('woff2'),
+      url(${AktivGroteskRegWoff}) format('woff'),
+      url(${AktivGroteskRegOtf}) format('opentype'),
+      url(${AktivGroteskRegEot}?#iefix) format('embedded-opentype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -71,6 +88,7 @@ const Typography = css`
   h4,
   h5,
   h6 {
+    font-family: ${theme.fonts.heading};
     font-weight: ${theme.fontWeights.normal};
     line-height: ${theme.root.font.headingLineHeight};
     margin: 0 0 1.75rem;
@@ -103,7 +121,7 @@ const Typography = css`
     font-size: ${theme.root.font.xs};
   }
   p {
-    font-size: 1.125em;
+    font-size: ${theme.root.font.baseSize};
     line-height: ${theme.root.font.bodyLineHeight};
     margin-bottom: 1.25em;
 

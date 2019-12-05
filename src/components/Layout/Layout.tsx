@@ -53,7 +53,7 @@ const Layout = ({ children }: LayoutProps) => {
           <Footer color="black">
             <Box p={[4]}>
               {/* Site by <a href="https://www.core37.agency">core37</a> */}
-              <Text fontSize={[1, 1, `calc(${theme.fontSizes[1]} / 1.5)`]}>&copy; {Year()}</Text>
+              <Text fontSize={1}>&copy; {Year()}</Text>
             </Box>
           </Footer>
         </Wrapper>
