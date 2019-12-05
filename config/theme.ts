@@ -65,7 +65,7 @@ const theme: ThemeShape = {
   colors: {
     body: '#ffffff',
     text: '#ffffff',
-    background: '#000000',
+    background: '#131313',
     
     primary: '#FED2BC',
     secondary: '#ffffff',
@@ -73,7 +73,7 @@ const theme: ThemeShape = {
 
     highlight: '#f5f6fb',
     accent: '#FED2BC',
-    sidebar: '#000000',
+    sidebar: '#131313',
 
     black: '#000000',
     white: '#ffffff',

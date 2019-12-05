@@ -25,6 +25,7 @@ import AktivGroteskRegOtf from './fonts/AktivGroteskCdRg.otf'
 //////////////////////////////////////////////////////////////////////
 
 const Typography = css`
+  /* Aeonik Regular */
   @font-face {
     font-family: 'Aeonik';
     src: url(${AeonikRegularEot});
@@ -36,6 +37,7 @@ const Typography = css`
     font-style: normal;
     font-display: swap;
   }
+  /* Aktiv Grotesk Condensed Regular */
   @font-face {
     font-family: 'AktivReg';
     src: url(${AktivGroteskRegEot});
@@ -62,18 +64,12 @@ const Typography = css`
     margin: 0;
   }
   body {
-    background: ${theme.colors.background};
-    color: ${theme.colors.text};
-
-    border: 0;
-    margin: 0;
-    padding: 0;
-
     font-size: ${theme.root.font.baseSize};
     font-family: ${theme.fonts.body};
     font-weight: ${theme.fontWeights.normal};
     line-height: ${theme.root.font.bodyLineHeight};
     letter-spacing: ${theme.root.font.baseLetterSpacing};
+
     -webkit-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

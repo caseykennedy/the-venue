@@ -25,6 +25,7 @@ import {
   fontSize,
   fontWeight,
   lineHeight,
+  letterSpacing,
   maxWidth,
   display,
   position,
@@ -43,6 +44,7 @@ import {
   FontSizeProps,
   FontWeightProps,
   LineHeightProps,
+  LetterSpacingProps,
   MaxWidthProps,
   DisplayProps, 
   PositionProps,
@@ -72,6 +74,7 @@ type ElementProps = SpaceProps &
   JustifyContentProps &
   FontWeightProps &
   LineHeightProps &
+  LetterSpacingProps &
   OverflowProps
 
 
@@ -177,6 +180,7 @@ export const Heading = styled.div<ElementProps>`
   ${fontSize}
   ${fontWeight}
   ${lineHeight}
+  ${letterSpacing}
   ${maxWidth}
   ${width}
 `
@@ -194,6 +198,7 @@ export const Text = styled.div<ElementProps>`
   ${fontSize}
   ${fontWeight}
   ${lineHeight}
+  ${letterSpacing}
   ${maxWidth}
   ${width}
 `

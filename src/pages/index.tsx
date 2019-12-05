@@ -29,6 +29,13 @@ import theme from '../../config/theme'
 // Types
 interface Props {}
 
+const AccordionProps = {
+  chevronColor: 'white',
+  color: 'white',
+  colorActive: 'white',
+  borderColor: 'white'
+}
+
 const IndexPage: React.SFC<Props> = () => {
   const pageAnimation = useSpring({
     config: config.slow,
@@ -87,7 +94,7 @@ const IndexPage: React.SFC<Props> = () => {
               </Heading>
               <Box width={1} mt={4}>
                 {accordionData.map((item, index) => (
-                  <Accordion title={item.title} key={index}>
+                  <Accordion title={item.title} key={index} {...AccordionProps}>
                     <Box pt={3}>{item.body}</Box>
                   </Accordion>
                 ))}

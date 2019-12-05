@@ -4,7 +4,7 @@
 //////////////////////////////////////////////////////////////////////
 
 // Core
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef } from 'react'
 import { graphql, Link, useStaticQuery } from 'gatsby'
 
 // Tools
@@ -14,7 +14,12 @@ import { graphql, Link, useStaticQuery } from 'gatsby'
 import Logo from '../logo'
 
 // Styles
-import { AccordionContainer, AccordionToggle, AccordionContent, Carat } from './styles.scss'
+import {
+  AccordionContainer,
+  AccordionToggle,
+  AccordionContent,
+  Carat
+} from './styles.scss'
 
 // Elements
 import { Box, Flex, Text, Heading } from '../../elements'
@@ -30,15 +35,15 @@ type Props = {
   title: string
   chevronColor?: string
   color?: string
-  borderColor?: string
   colorActive?: string
+  borderColor?: string
 } & typeof defaultProps
 
 const defaultProps = {
-  chevronColor: theme.colors.white,
-  color: theme.colors.white,
-  colorActive: theme.colors.white,
-  borderColor: theme.colors.white
+  chevronColor: 'white',
+  color: 'white',
+  colorActive: 'white',
+  borderColor: 'white'
 }
 
 interface QueryResult {
@@ -87,7 +92,7 @@ const Accordion: React.SFC<Props> = ({
           color={color}
           colorActive={colorActive}
         >
-          <Heading as="span" fontFamily="heading" fontSize={4} pt={1} pb={2}>
+          <Heading as="span" fontFamily="body" fontSize={4} pt={1} pb={2}>
             {title}
           </Heading>
           <Carat
@@ -101,9 +106,7 @@ const Accordion: React.SFC<Props> = ({
           style={{ maxHeight: `${setHeight}` }}
           borderColor={borderColor}
         >
-          <div className="accordion-content__inner">
-            {children}
-          </div>
+          <div className="accordion-content__inner">{children}</div>
         </AccordionContent>
       </div>
     </AccordionContainer>
