@@ -12,7 +12,7 @@ interface Props {
   objectPosition?: string
 }
 
-const Image: React.SFC<Props> = ({
+const ImgMatch: React.SFC<Props> = ({
   altText,
   objectFit,
   objectPosition,
@@ -56,4 +56,4 @@ const Image: React.SFC<Props> = ({
   )
 }
 
-export default Image
+export default ImgMatch
