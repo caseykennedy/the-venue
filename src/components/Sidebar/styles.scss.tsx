@@ -16,7 +16,7 @@ import { Box, Flex } from '../../elements'
 // Begin Styles
 //////////////////////////////////////////////////////////////////////
 
-export const SideBarInner = styled(Box)<{ bg: string }>`
+export const SideBarInner = styled(Box)<{ bg: any }>`
   position: fixed;
   height: 100%;
   width: ${p => p.theme.sidebarWidth.big};
