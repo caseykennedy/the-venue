@@ -13,6 +13,7 @@ import GlobalStyles from '../../styles/global'
 
 // Componentns
 import Sidebar from '../Sidebar'
+import { Icon } from '../Icons'
 // import Footer from './Footer'
 
 // Styles
@@ -53,7 +54,24 @@ const Layout = ({ children }: LayoutProps) => {
           <Footer color={theme.colors.accent}>
             <Box p={[4]}>
               {/* Site by <a href="https://www.core37.agency">core37</a> */}
-              <Text fontSize={1} color="black">&copy; {Year()}</Text>
+              {/* <Text fontSize={1} color="black">
+                &copy; {Year()}
+              </Text> */}
+              <Icon
+                name="carat"
+                color={theme.colors.black}
+                className="arrow-next"
+              />
+              <Icon
+                name="carat"
+                color={theme.colors.black}
+                className="arrow-next"
+              />
+              <Icon
+                name="carat"
+                color={theme.colors.black}
+                className="arrow-next"
+              />
             </Box>
           </Footer>
         </Wrapper>

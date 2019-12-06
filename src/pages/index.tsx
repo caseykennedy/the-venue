@@ -48,8 +48,8 @@ const IndexPage: React.SFC<Props> = () => {
       <AnimatedBox style={pageAnimation}>
         <Hero slides={heroSlides} />
         <Section>
-          <Flex justifyContent="flex-end">
-            <Box width={[1, 9 / 10]} pr={'10vw'}>
+          <Flex justifyContent="flex-start">
+            <Box width={[1, 2 / 3]} ml={[0, 0, 0, `calc(${theme.root.space})`]}>
               <Heading
                 as="h1"
                 fontSize={[
@@ -58,13 +58,11 @@ const IndexPage: React.SFC<Props> = () => {
                   `calc(${theme.root.font.xxxl} * 1.7)`
                 ]}
               >
-                The perfect space for your event. The Venue is a bit of modern
-                with a lot of class.
+                The perfect space for your event.
               </Heading>
-              {/* <Text as="p">
-                Half-sunken into the icy waters of Lindesnes, Under invites you
-                to dine five meters below the surface..
-              </Text> */}
+              <Text as="p">
+                The Venue is a bit of modern with a lot of class.
+              </Text>
             </Box>
           </Flex>
         </Section>
@@ -150,9 +148,9 @@ const IndexPage: React.SFC<Props> = () => {
             gap={theme.space[4]}
           >
             <Cell>
-              <Box bg="magenta">
+              <Box bg="black">
                 <ImgMatch
-                  src="brutalism-c.jpg"
+                  src="hero-agate.jpg"
                   altText="PlayWell program state coordinator"
                 />
               </Box>
@@ -167,6 +165,48 @@ const IndexPage: React.SFC<Props> = () => {
             </Cell>
           </Grid>
         </Box>
+        <Box as="section" px={theme.gutter} pb={4}>
+          <Grid
+            columns="repeat(auto-fit,minmax(120px,1fr))"
+            gap={theme.space[4]}
+          >
+            <Cell>
+              <Box bg="black">
+                <ImgMatch
+                  src="hero.jpg"
+                  altText="PlayWell program state coordinator"
+                />
+              </Box>
+            </Cell>
+            <Cell>
+              <Box bg="black">
+                <ImgMatch
+                  src="hero-agate.jpg"
+                  altText="PlayWell program state coordinator"
+                />
+              </Box>
+            </Cell>
+          </Grid>
+        </Box>
+        <Section>
+          <Flex justifyContent="flex-start">
+            <Box width={[1, 2 / 3]} ml={[0, 0, 0, `calc(${theme.root.space})`]}>
+              <Heading
+                as="h1"
+                fontSize={[
+                  `calc(${theme.root.font.xxxl} / 1)`,
+                  `calc(${theme.root.font.xxxl} * 1)`,
+                  `calc(${theme.root.font.xxxl} * 1.7)`
+                ]}
+              >
+                The perfect space for your event.
+              </Heading>
+              <Text as="p">
+                The Venue is a bit of modern with a lot of class.
+              </Text>
+            </Box>
+          </Flex>
+        </Section>
       </AnimatedBox>
     </Layout>
   )

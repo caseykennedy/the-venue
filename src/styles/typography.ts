@@ -96,6 +96,7 @@ const Typography = css`
   h1,
   .text--xxl {
     font-size: ${theme.root.font.xxxl};
+    line-height: calc(${theme.root.font.headingLineHeight} / 1.15);
   }
   h2,
   .text--xl {

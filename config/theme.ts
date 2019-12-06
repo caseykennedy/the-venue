@@ -31,7 +31,7 @@ interface ThemeShape {
     [key: string]: string
   }
   root: {
-    size: string
+    space: string
     font: {
       [key: string]: string
     }
@@ -151,7 +151,7 @@ const theme: ThemeShape = {
   },
 
   root: {
-    size: 'var(--root-size)',
+    space: 'var(--root-size)',
     font: {
       // Base sizing
       baseSize: 'var(--text-base-size)',

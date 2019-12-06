@@ -38,7 +38,7 @@ export const SideBarInner = styled(Box)<{ bg: any }>`
   .logo {
     svg {
       fill: ${props => readableColor(`${props.bg}`)};
-      /* width: calc(${theme.root.size}); */
+      /* width: calc(${theme.root.space}); */
     }
   }
 
@@ -48,7 +48,7 @@ export const SideBarInner = styled(Box)<{ bg: any }>`
 
   .nav-container {
     @media (min-width: calc(${theme.breakpoints[2]} + 1px)) {
-      height: calc(100vh - ${p => p.theme.root.size});
+      height: calc(100vh - ${theme.root.space});
     }
   }
 `
