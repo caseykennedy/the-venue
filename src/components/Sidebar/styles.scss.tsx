@@ -61,7 +61,7 @@ export const Nav = styled(Flex)<{ color: string }>`
 
   a {
     text-decoration: none;
-    text-align: center;
+    /* text-align: center; */
     color: ${props => readableColor(`${props.color}`)};
     font-size: ${p => p.theme.fontSizes[3]};
     line-height: 1.5;
