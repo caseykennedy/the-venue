@@ -55,7 +55,7 @@ export const AccordionToggle = styled.button<{ colorActive: string }>`
 
 export const AccordionContent = styled(Box)<{ borderColor: string }>`
   overflow: hidden;
-  transition: max-height 0.6s ease;
+  transition: max-height 0.3s ease;
   border-bottom: 1px solid ${p => p.borderColor};
 `
 

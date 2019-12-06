@@ -51,7 +51,7 @@ const Hero: React.SFC<Props> = ({ slides }) => {
     mobileFirst: true
   }
   return (
-    <HeroContainer>
+    <HeroContainer p={theme.gutter}>
       <Grid columns="1">
         <Cell>
           <Slider {...settings}>

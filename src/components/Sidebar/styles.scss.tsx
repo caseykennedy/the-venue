@@ -36,9 +36,20 @@ export const SideBarInner = styled(Box)<{ bg: any }>`
   }
 
   .logo {
+    a {
+      display: block;
+    }
+
     svg {
       fill: ${props => readableColor(`${props.bg}`)};
-      /* width: calc(${theme.root.space}); */
+      /* width: 7rem; */
+      height: 4rem;
+      width: 6rem;
+
+      @media (min-width: calc(${theme.breakpoints[2]} + 1px)) {
+        height: initial;
+        width: 7rem;
+      }
     }
   }
 
@@ -57,7 +68,13 @@ export const Nav = styled(Flex)<{ color: string }>`
   flex-wrap: nowrap;
   flex-direction: column;
   align-items: flex-start;
+
+  display: none;
   width: 100%;
+
+  @media (min-width: calc(${theme.breakpoints[2]} + 1px)) {
+    display: inherit;
+  }
 
   a {
     text-decoration: none;
@@ -72,21 +89,6 @@ export const Nav = styled(Flex)<{ color: string }>`
     &:focus,
     &.navlink-active {
       color: ${p => p.theme.colors.primary};
-    }
-
-    @media (max-width: ${p => p.theme.breakpoints[2]}) {
-      font-size: ${p => p.theme.fontSizes[2]};
-      margin-left: ${p => p.theme.space[4]};
-    }
-
-    @media (max-width: ${p => p.theme.breakpoints[1]}) {
-      font-size: ${p => p.theme.fontSizes[1]};
-      margin-left: ${p => p.theme.space[3]};
-    }
-
-    @media (max-width: ${p => p.theme.breakpoints[0]}) {
-      font-size: ${p => p.theme.fontSizes[0]};
-      margin-left: ${p => p.theme.space[2]};
     }
   }
 `

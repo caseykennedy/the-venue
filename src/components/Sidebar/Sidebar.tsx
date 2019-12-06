@@ -85,7 +85,7 @@ const Sidebar: React.SFC<Props> = ({ color }) => {
     : theme.colors.sidebar
   const hiddenStyle = shouldHideHeader ? 'hidden' : ''
   return (
-    <SideBarInner bg={backgroundStyle} as="aside" p={[4]}>
+    <SideBarInner bg={backgroundStyle} as="aside" px={theme.gutter} py={[2, 4]}>
       <Flex
         flexWrap="nowrap"
         flexDirection={['row', 'row', 'row', 'column']}
@@ -93,7 +93,7 @@ const Sidebar: React.SFC<Props> = ({ color }) => {
         justifyContent="space-between"
         className="nav-container"
       >
-        <Box width={1} mt={4} className="logo">
+        <Box width={1} className="logo">
           <Link to="/" aria-label="The Venue, Back to Home">
             <Logo />
           </Link>

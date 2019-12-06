@@ -47,9 +47,12 @@ const IndexPage: React.SFC<Props> = () => {
       <SEO />
       <AnimatedBox style={pageAnimation}>
         <Hero slides={heroSlides} />
-        <Section>
+        <Section pt={6}>
           <Flex justifyContent="flex-start">
-            <Box width={[1, 2 / 3]} ml={[0, 0, 0, `calc(${theme.root.space})`]}>
+            <Box
+              width={[8 / 10, 2 / 3]}
+              ml={[0, 0, 0, `calc(${theme.root.space})`]}
+            >
               <Heading
                 as="h1"
                 fontSize={[
@@ -91,7 +94,7 @@ const IndexPage: React.SFC<Props> = () => {
         </Box>
         <Section>
           <Flex justifyContent="flex-end">
-            <Box width={[1, 1, 2 / 3]} pr={'10vw'}>
+            <Box width={[1, 2 / 3]} pr={'10vw'}>
               <Heading as="h2">
                 The perfect space for your event. The Venue is a bit of modern
                 with a lot of class — our staff are friendly and attentive to
@@ -126,10 +129,13 @@ const IndexPage: React.SFC<Props> = () => {
           </Grid>
         </Box>
         <Section>
-          <Box width={[1, 1, 1 / 2]}>
+          <Box
+            width={[8 / 10, 2 / 3]}
+            pl={[0, 0, 0, `calc(${theme.root.space})`]}
+          >
             <Heading as="h3">We happily offer the following amenities:</Heading>
           </Box>
-          <Box width={[1, 1, 1 / 2]}>
+          <Box width={[1, 1, 1 / 3]}>
             <ul>
               <li>Fridge freezer</li>
               <li>Full prep kitchen </li>
@@ -190,17 +196,11 @@ const IndexPage: React.SFC<Props> = () => {
         </Box>
         <Section>
           <Flex justifyContent="flex-start">
-            <Box width={[1, 2 / 3]} ml={[0, 0, 0, `calc(${theme.root.space})`]}>
-              <Heading
-                as="h1"
-                fontSize={[
-                  `calc(${theme.root.font.xxxl} / 1)`,
-                  `calc(${theme.root.font.xxxl} * 1)`,
-                  `calc(${theme.root.font.xxxl} * 1.7)`
-                ]}
-              >
-                The perfect space for your event.
-              </Heading>
+            <Box
+              width={[8 / 10, 1]}
+              ml={[0, 0, 0, `calc(${theme.root.space})`]}
+            >
+              <Heading as="h2">The perfect space for your event.</Heading>
               <Text as="p">
                 The Venue is a bit of modern with a lot of class.
               </Text>

@@ -16,7 +16,7 @@ import { Box, Flex } from '../../elements'
 // Begin Styles
 //////////////////////////////////////////////////////////////////////
 
-export const HeroContainer = styled.section`
+export const HeroContainer = styled(Box)`
   /* overflow: hidden; */
 
   .slick-slider {
@@ -39,7 +39,7 @@ export const HeroContainer = styled.section`
 
     .img {
       @media (min-width: calc(${theme.breakpoints[2]} + 1px)) {
-        height: 100vh;
+        height: 55vh;
       }
     }
   }
