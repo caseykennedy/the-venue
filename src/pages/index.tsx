@@ -49,7 +49,7 @@ const IndexPage: React.SFC<Props> = () => {
         <Hero slides={heroSlides} />
         <Section>
           <Flex justifyContent="flex-end">
-            <Box width={[1, 1, 1 / 2]}>
+            <Box width={[1, 1, 2 / 3]} pr={'10vw'}>
               <Heading as="h1">
                 A restaurant five and a half meters below the surface in Norway,
                 exposing you to the wonders beneath the sea.
@@ -86,7 +86,7 @@ const IndexPage: React.SFC<Props> = () => {
         </Box>
         <Section>
           <Flex justifyContent="flex-end">
-            <Box width={[1, 1, 1 / 2]}>
+            <Box width={[1, 1, 2 / 3]} pr={'10vw'}>
               <Heading as="h1">
                 The perfect space for your event. The Venue is a bit of modern
                 with a lot of class — our staff are friendly and attentive to

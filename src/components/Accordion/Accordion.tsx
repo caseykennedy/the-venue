@@ -92,7 +92,7 @@ const Accordion: React.SFC<Props> = ({
           color={color}
           colorActive={colorActive}
         >
-          <Heading as="span" fontFamily="body" fontSize={4} pt={1} pb={2}>
+          <Heading as="span" fontFamily="body" fontSize={3} pt={1} pb={2}>
             {title}
           </Heading>
           <Carat
@@ -106,7 +106,7 @@ const Accordion: React.SFC<Props> = ({
           style={{ maxHeight: `${setHeight}` }}
           borderColor={borderColor}
         >
-          <div className="accordion-content__inner">{children}</div>
+          <Box pb={3}>{children}</Box>
         </AccordionContent>
       </div>
     </AccordionContainer>

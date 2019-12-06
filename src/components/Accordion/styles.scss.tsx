@@ -41,7 +41,7 @@ export const AccordionToggle = styled.button<{ colorActive: string }>`
   display: flex;
   border: none;
   outline: none;
-  padding: calc(1rem / 3) calc(1rem / 4);
+  padding: calc(1rem / 3) 0;
   transition: background-color 0.6s ease;
 
   &:last-child {
@@ -57,10 +57,6 @@ export const AccordionContent = styled(Box)<{ borderColor: string }>`
   overflow: hidden;
   transition: max-height 0.6s ease;
   border-bottom: 1px solid ${p => p.borderColor};
-
-  .accordion-content__inner {
-    margin-bottom: ${theme.space[4]};
-  }
 `
 
 export const Carat = styled(Icon)<{ chevronColor: string }>`

@@ -32,8 +32,14 @@ export const HeroContainer = styled.section`
         position: absolute;
         right: 2rem;
         top: 2rem;
-        
+
         z-index: 999;
+      }
+    }
+
+    .img {
+      @media (min-width: calc(${theme.breakpoints[2]} + 1px)) {
+        height: 100vh;
       }
     }
   }
@@ -41,7 +47,6 @@ export const HeroContainer = styled.section`
   .arrow-prev {
     transform: rotate(90deg);
     svg {
-      
     }
   }
 `

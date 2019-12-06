@@ -38,34 +38,52 @@ export const SideBarInner = styled(Box)<{ bg: any }>`
   .logo {
     svg {
       fill: ${props => readableColor(`${props.bg}`)};
-      width: calc(${theme.root.size});
+      /* width: calc(${theme.root.size}); */
     }
   }
 
   &.hidden {
     transform: translateY(-110%);
   }
+
+  .nav-container {
+    @media (min-width: calc(${theme.breakpoints[2]} + 1px)) {
+      height: calc(100vh - ${p => p.theme.root.size});
+    }
+  }
 `
 
 export const Nav = styled(Flex)<{ color: string }>`
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+
   a {
     text-decoration: none;
+    text-align: center;
     color: ${props => readableColor(`${props.color}`)};
     font-size: ${p => p.theme.fontSizes[3]};
     line-height: 1.5;
+
+    width: 100%;
+
     &:hover,
     &:focus,
     &.navlink-active {
       color: ${p => p.theme.colors.primary};
     }
+
     @media (max-width: ${p => p.theme.breakpoints[2]}) {
       font-size: ${p => p.theme.fontSizes[2]};
       margin-left: ${p => p.theme.space[4]};
     }
+
     @media (max-width: ${p => p.theme.breakpoints[1]}) {
       font-size: ${p => p.theme.fontSizes[1]};
       margin-left: ${p => p.theme.space[3]};
     }
+
     @media (max-width: ${p => p.theme.breakpoints[0]}) {
       font-size: ${p => p.theme.fontSizes[0]};
       margin-left: ${p => p.theme.space[2]};

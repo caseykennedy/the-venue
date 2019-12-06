@@ -50,10 +50,10 @@ const Layout = ({ children }: LayoutProps) => {
         <Wrapper>
           <Sidebar color="black" />
           <Main>{children}</Main>
-          <Footer color="#131313">
+          <Footer color={theme.colors.accent}>
             <Box p={[4]}>
               {/* Site by <a href="https://www.core37.agency">core37</a> */}
-              <Text fontSize={1}>&copy; {Year()}</Text>
+              <Text fontSize={1} color="black">&copy; {Year()}</Text>
             </Box>
           </Footer>
         </Wrapper>

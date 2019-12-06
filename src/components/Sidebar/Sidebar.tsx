@@ -59,29 +59,31 @@ const Sidebar: React.SFC<Props> = ({ color }) => {
   const data: QueryResult = useStaticQuery(query)
 
   // On scroll class change
-  const [shouldHideHeader, setShouldHideHeader] = useState(false);
-  const [shouldShowBackground, setShouldShowBackground] = useState(false);
+  const [shouldHideHeader, setShouldHideHeader] = useState(false)
+  const [shouldShowBackground, setShouldShowBackground] = useState(false)
 
   // Scroll settings
-  const MINIMUM_SCROLL = 80;
-  const TIMEOUT_DELAY = 400;
+  const MINIMUM_SCROLL = 80
+  const TIMEOUT_DELAY = 400
 
   // Scroll watch
   useScrollWatch((callbackData: CallbackTypes) => {
-    const { previousScrollTop, currentScrollTop } = callbackData;
-    const isScrolledDown = previousScrollTop < currentScrollTop;
-    const isMinimumScrolled = currentScrollTop > MINIMUM_SCROLL;
+    const { previousScrollTop, currentScrollTop } = callbackData
+    const isScrolledDown = previousScrollTop < currentScrollTop
+    const isMinimumScrolled = currentScrollTop > MINIMUM_SCROLL
 
-    setShouldShowBackground(currentScrollTop > 2);
+    setShouldShowBackground(currentScrollTop > 2)
 
     setTimeout(() => {
-      setShouldHideHeader(isScrolledDown && isMinimumScrolled);
-    }, TIMEOUT_DELAY);
-  });
-  
+      setShouldHideHeader(isScrolledDown && isMinimumScrolled)
+    }, TIMEOUT_DELAY)
+  })
+
   // Scroll state styles
-  const backgroundStyle = shouldShowBackground ? theme.colors.sidebar : 'transparent';
-  const hiddenStyle = shouldHideHeader ? 'hidden' : '';
+  const backgroundStyle = shouldShowBackground
+    ? theme.colors.sidebar
+    : theme.colors.sidebar
+  const hiddenStyle = shouldHideHeader ? 'hidden' : ''
   return (
     <SideBarInner bg={backgroundStyle} as="aside" p={[4]}>
       <Flex
@@ -89,20 +91,14 @@ const Sidebar: React.SFC<Props> = ({ color }) => {
         flexDirection={['row', 'row', 'row', 'column']}
         alignItems={['center', 'center', 'center', 'flex-start']}
         justifyContent="space-between"
+        className="nav-container"
       >
         <Box width={1} mt={4} className="logo">
           <Link to="/" aria-label="The Venue, Back to Home">
             <Logo />
           </Link>
         </Box>
-        <Nav
-          color={color}
-          mt={[0, 0, 0, 10]}
-          as="nav"
-          flexWrap="nowrap"
-          flexDirection={['column']}
-          alignItems="flex-start"
-        >
+        <Nav as="nav" color={color}>
           {data.navigation.edges.map(({ node: item }) => (
             <Link to={item.link} key={item.name} activeClassName="nav--active">
               {item.name}

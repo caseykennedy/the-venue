@@ -73,7 +73,7 @@ const theme: ThemeShape = {
 
     highlight: '#f5f6fb',
     accent: '#FED2BC',
-    sidebar: '#131313',
+    sidebar: '#000000',
 
     black: '#000000',
     white: '#ffffff',
@@ -142,8 +142,8 @@ const theme: ThemeShape = {
   maxWidth: 1680,
 
   sidebarWidth: {
-    big: '300px',
-    normal: '280px',
+    big: '190px',
+    normal: '200px',
   },
 
   transition: {

@@ -47,11 +47,12 @@ const Hero: React.SFC<Props> = ({ slides }) => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 6000,
-    adaptiveHeight: false
+    adaptiveHeight: false,
+    mobileFirst: true
   }
   return (
     <HeroContainer>
-      <Grid columns="repeat(auto-fit,minmax(120px,1fr))">
+      <Grid columns="1">
         <Cell>
           <Slider {...settings}>
             {slides.map((slide, index) => (
@@ -84,3 +85,27 @@ Hero.defaultProps = defaultProps
 
 //////////////////////////////////////////////////////////////////////
 // End
+
+{/* <Grid columns="1">
+  <Cell>
+    <Slider {...settings}>
+      {slides.map((slide, index) => (
+        <Box key={index}>
+          <ImgMatch src={slide.src} altText={slide.altText} />
+          <Box mt={3}>
+            <Icon
+              name="carat"
+              color={theme.colors.primary}
+              className="arrow-prev"
+            />
+            <Icon
+              name="carat"
+              color={theme.colors.primary}
+              className="arrow-next"
+            />
+          </Box>
+        </Box>
+      ))}
+    </Slider>
+  </Cell>
+</Grid> */}
