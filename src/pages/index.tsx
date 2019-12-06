@@ -148,7 +148,7 @@ const IndexPage: React.SFC<Props> = () => {
             </ul>
           </Box>
         </Section>
-        <Box as="section" px={theme.gutter} py={4}>
+        <Box as="section" px={theme.gutter} pb={4}>
           <Grid
             columns="repeat(auto-fit,minmax(120px,1fr))"
             gap={theme.space[4]}
@@ -171,7 +171,7 @@ const IndexPage: React.SFC<Props> = () => {
             </Cell>
           </Grid>
         </Box>
-        <Box as="section" px={theme.gutter} pb={4}>
+        <Box as="section" px={theme.gutter}>
           <Grid
             columns="repeat(auto-fit,minmax(120px,1fr))"
             gap={theme.space[4]}

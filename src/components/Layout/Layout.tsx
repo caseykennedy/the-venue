@@ -58,17 +58,7 @@ const Layout = ({ children }: LayoutProps) => {
                 &copy; {Year()}
               </Text> */}
               <Icon
-                name="carat"
-                color={theme.colors.black}
-                className="arrow-next"
-              />
-              <Icon
-                name="carat"
-                color={theme.colors.black}
-                className="arrow-next"
-              />
-              <Icon
-                name="carat"
+                name="instagram"
                 color={theme.colors.black}
                 className="arrow-next"
               />
