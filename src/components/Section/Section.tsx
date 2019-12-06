@@ -30,7 +30,7 @@ const Section: React.SFC<Props> = ({ children, bg, color, pt, pb }) => (
     <Flex
       flexWrap="wrap"
       width={1}
-      maxWidth={theme.maxWidth}
+      // maxWidth={theme.maxWidth}
       px={theme.gutter}
       m="0 auto"
     >

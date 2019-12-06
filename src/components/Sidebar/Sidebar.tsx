@@ -81,8 +81,8 @@ const Sidebar: React.SFC<Props> = ({ color }) => {
 
   // Scroll state styles
   const backgroundStyle = shouldShowBackground
-    ? theme.colors.sidebar
-    : theme.colors.sidebar
+    ? theme.colors.primary
+    : theme.colors.accent
   const hiddenStyle = shouldHideHeader ? 'hidden' : ''
   return (
     <SideBarInner bg={backgroundStyle} as="aside" px={theme.gutter} py={[2, 4]}>

@@ -162,6 +162,7 @@ export const Button = styled.button<ElementProps>`
   ${width}
   ${color}
   ${overflow}
+  ${textAlign}
 `
 
 Button.displayName = 'Button'
@@ -170,7 +171,6 @@ Button.displayName = 'Button'
 
 export const Heading = styled.div<ElementProps>`
   box-sizing: border-box;
-  font-weight: 400;
   display: block;
   transition: ${theme.transition.string};
   ${space}
