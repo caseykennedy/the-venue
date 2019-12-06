@@ -95,7 +95,7 @@ const Typography = css`
   }
   h1,
   .text--xxl {
-    font-size: ${theme.root.font.xxl};
+    font-size: ${theme.root.font.xxxl};
   }
   h2,
   .text--xl {

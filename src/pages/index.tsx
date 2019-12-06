@@ -49,15 +49,22 @@ const IndexPage: React.SFC<Props> = () => {
         <Hero slides={heroSlides} />
         <Section>
           <Flex justifyContent="flex-end">
-            <Box width={[1, 1, 2 / 3]} pr={'10vw'}>
-              <Heading as="h1">
-                A restaurant five and a half meters below the surface in Norway,
-                exposing you to the wonders beneath the sea.
+            <Box width={[1, 9 / 10]} pr={'10vw'}>
+              <Heading
+                as="h1"
+                fontSize={[
+                  `calc(${theme.root.font.xxxl} / 1)`,
+                  `calc(${theme.root.font.xxxl} * 1)`,
+                  `calc(${theme.root.font.xxxl} * 1.7)`
+                ]}
+              >
+                The perfect space for your event. The Venue is a bit of modern
+                with a lot of class.
               </Heading>
-              <Text as="p">
+              {/* <Text as="p">
                 Half-sunken into the icy waters of Lindesnes, Under invites you
                 to dine five meters below the surface..
-              </Text>
+              </Text> */}
             </Box>
           </Flex>
         </Section>
@@ -87,7 +94,7 @@ const IndexPage: React.SFC<Props> = () => {
         <Section>
           <Flex justifyContent="flex-end">
             <Box width={[1, 1, 2 / 3]} pr={'10vw'}>
-              <Heading as="h1">
+              <Heading as="h2">
                 The perfect space for your event. The Venue is a bit of modern
                 with a lot of class — our staff are friendly and attentive to
                 your needs.
@@ -122,7 +129,7 @@ const IndexPage: React.SFC<Props> = () => {
         </Box>
         <Section>
           <Box width={[1, 1, 1 / 2]}>
-            <Heading as="h1">We happily offer the following amenities:</Heading>
+            <Heading as="h3">We happily offer the following amenities:</Heading>
           </Box>
           <Box width={[1, 1, 1 / 2]}>
             <ul>
@@ -170,7 +177,7 @@ export default IndexPage
 // Hero Slides
 const heroSlides = [
   { src: 'hero.jpg', altText: 'The Venue at Tahoe event space.' },
-  { src: 'hero--b.jpg', altText: 'The Venue at Tahoe event space.' }
+  { src: 'hero-agate.jpg', altText: 'The Venue at Tahoe event space.' }
 ]
 
 // Accordion
