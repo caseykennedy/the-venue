@@ -55,12 +55,9 @@ const IndexPage: React.SFC<Props> = () => {
                 The perfect space for your event, private party or gathering in
                 Tahoe
               </Heading>
-              <Button bg="secondary" color="white" px={5} py={3}>
+              <Button bg="accent" color="white" px={5} py={3}>
                 Reserve the Venue
               </Button>
-              {/* <Text as="p">
-                The Venue at Tahoe is a bit of modern with a lot of class.
-              </Text> */}
             </Box>
           </Flex>
         </Section>
@@ -130,20 +127,43 @@ const IndexPage: React.SFC<Props> = () => {
             <Cell>
               <Box bg="black">
                 <ImgMatch
+                  src="cocktail-d.jpg"
+                  altText="PlayWell program state coordinator"
+                />
+              </Box>
+            </Cell>
+            <Cell>
+              <Box bg="black">
+                <ImgMatch
                   src="cocktail-f.jpg"
                   altText="PlayWell program state coordinator"
                 />
               </Box>
             </Cell>
-            <Cell />
-            <Cell />
-            <Cell />
+            <Cell>
+              <Box bg="black">
+                <ImgMatch
+                  src="cocktail-b.jpg"
+                  altText="PlayWell program state coordinator"
+                />
+              </Box>
+            </Cell>
+            <Cell>
+              <Box bg="black">
+                <ImgMatch
+                  src="cocktail-e.jpg"
+                  altText="PlayWell program state coordinator"
+                />
+              </Box>
+            </Cell>
           </Grid>
         </Box>
 
-        <Section pt="15vw" pb="15vw">
+        <Section pt="12vw" pb="15vw">
           <Box width={1}>
-            <Heading as="h4" color="secondary">Amenities</Heading>
+            <Heading as="h4" color="secondary">
+              Amenities
+            </Heading>
             <List>
               <li>Fridge / Freezer</li>
               <li>Full prep kitchen </li>
@@ -159,7 +179,7 @@ const IndexPage: React.SFC<Props> = () => {
 
         {/* <Box as="section" px={theme.gutter} pb={4}>
           <Grid
-            columns="repeat(auto-fit,minmax(376px,1fr))"
+            columns="repeat(auto-fit,minmax(306px,1fr))"
             gap={theme.space[4]}
           >
             <Cell>
@@ -205,27 +225,32 @@ const IndexPage: React.SFC<Props> = () => {
 
         <Box as="section" px={theme.gutter} pb={4}>
           <Grid
-            columns="repeat(auto-fit,minmax(376px,1fr))"
+            columns="repeat(auto-fit,minmax(306px,1fr))"
             gap={theme.space[4]}
           >
             <Cell>
               <Box bg="black">
                 <ImgMatch
-                  src="hero-agate.jpg"
+                  src="map.png"
                   altText="PlayWell program state coordinator"
                 />
+                {/* <Box bg="black" style={{ height: '100vh', width: '100%' }}>
+                <GoogleMapReact
+                  bootstrapURLKeys={{
+                    key: 'AIzaSyBhFPTf9XXJ9x7SPjnyG7Vg8KaEPxKwBro'
+                  }}
+                  // defaultCenter={this.props.center}
+                  defaultZoom={11}
+                >
+                  <Box lat={59.955413} lng={30.337844} />
+                </GoogleMapReact>
+              </Box> */}
               </Box>
             </Cell>
             <Cell middle={false} center={false}>
               <Box p={4}>
-                <Heading as="h2">
-                  Located on the second floor of the Laub Building in South Lake
-                  Tahoe, the Venue at Tahoe is the perfect space for your
-                  private party, gathering, or event.
-                </Heading>
-                <Text as="p">
-                  The Venue is a bit of modern with a lot of class.
-                </Text>
+                <Heading as="h3">31 US-50</Heading>
+                <Text as="p">Stateline, NV 89449</Text>
               </Box>
             </Cell>
           </Grid>

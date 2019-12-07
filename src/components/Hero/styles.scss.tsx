@@ -21,9 +21,16 @@ export const HeroContainer = styled(Box)`
 
   .slick-slider {
     .slick-arrow {
+      background: ${theme.colors.secondary};
+      color: transparent;
+      border: 0;
+      cursor: pointer;
+      width: calc(${theme.root.space} / 2.5);
+      height: calc(${theme.root.space} / 2.5);
+
       &.slick-prev {
         position: absolute;
-        right: 6rem;
+        right: calc((${theme.root.space} / 2) + (${theme.root.space} / 4));
         top: 2rem;
 
         z-index: 999;
