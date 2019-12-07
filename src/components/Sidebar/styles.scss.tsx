@@ -44,11 +44,11 @@ export const SideBarInner = styled(Box)<{ bg: any }>`
       fill: ${props => readableColor(`${props.bg}`)};
       /* width: 7rem; */
       height: 4rem;
-      width: 6rem;
+      width: 7rem;
 
       @media (min-width: calc(${theme.breakpoints[2]} + 1px)) {
         height: initial;
-        width: 7rem;
+        width: initial;
       }
     }
   }

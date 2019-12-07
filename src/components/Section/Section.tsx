@@ -21,8 +21,8 @@ import theme from '../../../config/theme'
 interface Props {
   bg?: string
   color?: string
-  pt?: number | number[]
-  pb?: number | number[]
+  pt?: number | number[] | string
+  pb?: number | number[] | string
 }
 
 const Section: React.SFC<Props> = ({ children, bg, color, pt, pb }) => (

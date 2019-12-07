@@ -154,7 +154,7 @@ AnimatedFlex.displayName = 'AnimatedFlex'
 export const Button = styled.button<ElementProps>`
   border: none;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 0.8em;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
   cursor: pointer;

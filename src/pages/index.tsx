@@ -50,9 +50,9 @@ const IndexPage: React.SFC<Props> = () => {
         <Hero slides={heroSlides} />
         <Section>
           <Flex width={1} justifyContent="center" textAlign="center">
-            <Box width={[9/10, 7 / 10, 6 / 10]}>
+            <Box width={[9 / 10, 7 / 10, 6 / 10]}>
               <Heading as="h1">
-                The perfect space for your event, private party, or gathering in
+                The perfect space for your event, private party or gathering in
                 Tahoe
               </Heading>
               <Button bg="secondary" color="white" px={5} py={3}>
@@ -141,27 +141,20 @@ const IndexPage: React.SFC<Props> = () => {
           </Grid>
         </Box>
 
-        <Section>
-          <Flex width={1} justifyContent="flex-end">
-            <Box width={[1, 2 / 3]}>
-              <Flex pr={[0, 0, 0, `calc(${theme.root.space})`]}>
-                {/* <Box width={[1, 1, 1 / 2, 1 / 2]} /> */}
-                <Box width={[1, 1, 1 / 2, 1 / 2]}>
-                  <Heading as="h3">Amenities</Heading>
-                  <List>
-                    <li>Fridge freezer</li>
-                    <li>Full prep kitchen </li>
-                    <li>Ice Machine</li>
-                    <li>Two well bars</li>
-                    <li>Furniture and tables</li>
-                    <li>JBL EOS sound system</li>
-                    <li>Party Lighting</li>
-                    <li>Glassware</li>
-                  </List>
-                </Box>
-              </Flex>
-            </Box>
-          </Flex>
+        <Section pt="15vw" pb="15vw">
+          <Box width={1}>
+            <Heading as="h4" color="secondary">Amenities</Heading>
+            <List>
+              <li>Fridge / Freezer</li>
+              <li>Full prep kitchen </li>
+              <li>Ice machine</li>
+              <li>Two well bars</li>
+              <li>Furniture / tables</li>
+              <li>JBL (eos) sound</li>
+              <li>Party lighting</li>
+              <li>Glassware</li>
+            </List>
+          </Box>
         </Section>
 
         {/* <Box as="section" px={theme.gutter} pb={4}>
@@ -245,11 +238,19 @@ const IndexPage: React.SFC<Props> = () => {
 export default IndexPage
 
 const List = styled.ul`
-  border-top: 1px solid ${theme.colors.text};
+  /* border-top: 1px solid ${theme.colors.text}; */
 
   li {
-    border-bottom: 1px solid ${theme.colors.text};
+    /* border-bottom: 1px solid ${theme.colors.text}; */
+    font-size: ${theme.fontSizes[3]};
+    display: inline-block;
     padding: ${theme.space[2]} 0;
+    width: 50%;
+
+    @media (min-width: calc(${theme.breakpoints[1]} + 1px)) {
+      font-size: ${theme.fontSizes[5]};
+      width: 33%;
+    }
   }
 `
 

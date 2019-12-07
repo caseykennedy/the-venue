@@ -68,9 +68,10 @@ const theme: ThemeShape = {
     background: '#041417',
     
     primary: '#192426',
-    secondary: '#99743b',
+    secondary: '#664516',
+    tertiary: '#418c9a',
 
-    accent: '#99743b',
+    accent: '#664516',
 
     sidebar: '#062d34',
 
