@@ -8,6 +8,7 @@ import * as React from 'react'
 import styled from 'styled-components'
 import { animated, useSpring, config } from 'react-spring'
 import { Grid, Cell } from 'styled-css-grid'
+import { lighten } from 'polished'
 
 // Components
 import Layout from '../components/Layout'
@@ -85,7 +86,7 @@ const IndexPage: React.SFC<Props> = () => {
           </Grid>
         </Box>
 
-        <Section bg="primary">
+        <Section bg="secondary">
           <Flex justifyContent="flex-end">
             <Box width={[1, 2 / 3]}>
               <Box width={1} pl={[0, 0, 0, `calc(${theme.root.space} * 2)`]}>
@@ -161,7 +162,7 @@ const IndexPage: React.SFC<Props> = () => {
 
         <Section pt="12vw" pb="15vw">
           <Box width={1}>
-            <Heading as="h4" color="secondary">
+            <Heading as="h4" color={lighten(0.1, `${theme.colors.primary}`)}>
               Amenities
             </Heading>
             <List>

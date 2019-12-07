@@ -55,7 +55,7 @@ const Typography = css`
   }
   ::selection {
     color: white;
-    background-color: ${theme.colors.accent};
+    background-color: ${theme.colors.primary};
   }
   html {
     font-size: 16px;
@@ -132,7 +132,7 @@ const Typography = css`
     
     &:hover,
     &:focus {
-      color: ${theme.colors.accent};
+      color: ${theme.colors.primary};
     }
   }
 `

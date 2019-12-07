@@ -5,7 +5,7 @@
 
 // Core
 import styled from 'styled-components';
-import { readableColor } from 'polished'
+import { lighten } from 'polished'
 
 // Constants
 import theme from '../../../config/theme'
@@ -33,23 +33,25 @@ export const Main = styled.main`
   }
 `
 
-export const Footer = styled.footer<{ color: string[] }>`
+export const Footer = styled.footer<{ color?: string[] }>`
   position: fixed;
   width: ${theme.sidebarWidth.big};
   bottom: 0;
-  background: ${theme.colors.accent};
-  /* color: ${props =>
-    readableColor(`${props.color}`, `${props.theme.colors.grey}`, '#c3c3c3')}; */
+  background: ${theme.colors.primary};
+  color: ${lighten(0.3, `${theme.colors.primary}`)};
+
   a {
-    /* color: ${props => readableColor(`${props.color}`)}; */
+    color: ${lighten(0.3, `${theme.colors.primary}`)};
     text-decoration: none;
+
     &:hover {
-      color: ${theme.colors.primary};
+      color: ${lighten(0.6, `${theme.colors.primary}`)};
     }
   }
   
   .ico {
     margin-right: ${theme.space[2]};
+    width: ${theme.space[4]};
   }
 
   @media (max-width: ${theme.breakpoints[4]}) {

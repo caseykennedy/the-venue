@@ -59,7 +59,7 @@ export const SideBarInner = styled(Box)<{ bg: any }>`
 
   .nav-container {
     @media (min-width: calc(${theme.breakpoints[2]} + 1px)) {
-      height: calc(100vh - ${theme.root.space});
+      height: calc(100vh - (${theme.root.space} * 1.5));
     }
   }
 `

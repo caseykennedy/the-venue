@@ -53,10 +53,6 @@ const Layout = ({ children }: LayoutProps) => {
           <Main>{children}</Main>
           <Footer>
             <Box p={[4]}>
-              {/* Site by <a href="https://www.core37.agency">core37</a> */}
-              {/* <Text fontSize={1} color="black">
-                &copy; {Year()}
-              </Text> */}
               <Icon
                 name="instagram"
                 color={theme.colors.white}
@@ -72,6 +68,11 @@ const Layout = ({ children }: LayoutProps) => {
                 color={theme.colors.white}
                 className="arrow-next"
               />
+              <Text fontSize={1} mt={3}>
+                &copy; {Year()}
+                <br/>
+                Site by <a href="https://www.core37.agency">core37</a>
+              </Text>
             </Box>
           </Footer>
         </Wrapper>

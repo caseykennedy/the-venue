@@ -16,6 +16,7 @@ import useScrollWatch from '../../utils/useScrollWatch'
 
 // Components
 import Logo from '../logo'
+import { Icon } from '../Icons'
 
 // Elements
 import { Box, Flex } from '../../elements'
@@ -81,8 +82,8 @@ const Sidebar: React.SFC<Props> = ({ color }) => {
 
   // Scroll state styles
   const backgroundStyle = shouldShowBackground
-    ? theme.colors.primary
-    : theme.colors.accent
+    ? theme.colors.secondary
+    : theme.colors.primary
   const hiddenStyle = shouldHideHeader ? 'hidden' : ''
   return (
     <SideBarInner bg={backgroundStyle} as="aside" px={theme.gutter} py={[2, 4]}>
