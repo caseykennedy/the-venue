@@ -50,16 +50,14 @@ const IndexPage: React.SFC<Props> = () => {
         <Hero slides={heroSlides} />
         <Section>
           <Flex width={1} justifyContent="center" textAlign="center">
-            <Box
-              width={[6 / 10]}
-            >
-              <Heading
-                as="h1"
-              >
+            <Box width={[9/10, 7 / 10, 6 / 10]}>
+              <Heading as="h1">
                 The perfect space for your event, private party, or gathering in
-                Tahoe.
+                Tahoe
               </Heading>
-              <Button>Book a Date</Button>
+              <Button bg="secondary" color="white" px={5} py={3}>
+                Reserve the Venue
+              </Button>
               {/* <Text as="p">
                 The Venue at Tahoe is a bit of modern with a lot of class.
               </Text> */}
@@ -90,10 +88,10 @@ const IndexPage: React.SFC<Props> = () => {
           </Grid>
         </Box>
 
-        <Section bg="tertiary">
+        <Section bg="primary">
           <Flex justifyContent="flex-end">
             <Box width={[1, 2 / 3]}>
-              <Box width={1} pr={[0, 0, 0, `calc(${theme.root.space})`]}>
+              <Box width={1} pl={[0, 0, 0, `calc(${theme.root.space} * 2)`]}>
                 <Heading as="h2">
                   Located on the second floor of the Laub Building in South Lake
                   Tahoe.
@@ -227,9 +225,11 @@ const IndexPage: React.SFC<Props> = () => {
             </Cell>
             <Cell middle={false} center={false}>
               <Box p={4}>
-                <Heading as="h2">Located on the second floor of the Laub Building in South Lake
+                <Heading as="h2">
+                  Located on the second floor of the Laub Building in South Lake
                   Tahoe, the Venue at Tahoe is the perfect space for your
-                  private party, gathering, or event.</Heading>
+                  private party, gathering, or event.
+                </Heading>
                 <Text as="p">
                   The Venue is a bit of modern with a lot of class.
                 </Text>

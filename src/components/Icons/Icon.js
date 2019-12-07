@@ -38,25 +38,25 @@ export const Icon = ({ name, className, color, fas }) => {
       )
     case 'nextArrow':
       return (
-        <IconStyle className="ico">
+        <IconStyle color={color} className="ico">
           <NextArrow />
         </IconStyle>
       )
     case 'facebook':
       return (
-        <IconStyle className="ico ico-facebook">
+        <IconStyle color={color} className="ico ico-facebook">
           <Facebook />
         </IconStyle>
       )
     case 'twitter':
       return (
-        <IconStyle className="ico ico-twitter">
+        <IconStyle color={color} className="ico ico-twitter">
           <Twitter />
         </IconStyle>
       )
     case 'instagram':
       return (
-        <IconStyle className="ico ico-instagram">
+        <IconStyle color={color} className="ico ico-instagram">
           <Instagram />
         </IconStyle>
       )

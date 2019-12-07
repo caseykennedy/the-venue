@@ -51,7 +51,7 @@ const Layout = ({ children }: LayoutProps) => {
         <Wrapper>
           <Sidebar color="black" />
           <Main>{children}</Main>
-          <Footer color={theme.colors.accent}>
+          <Footer>
             <Box p={[4]}>
               {/* Site by <a href="https://www.core37.agency">core37</a> */}
               {/* <Text fontSize={1} color="black">
@@ -59,7 +59,17 @@ const Layout = ({ children }: LayoutProps) => {
               </Text> */}
               <Icon
                 name="instagram"
-                color={theme.colors.black}
+                color={theme.colors.white}
+                className="arrow-next"
+              />
+              <Icon
+                name="facebook"
+                color={theme.colors.white}
+                className="arrow-next"
+              />
+              <Icon
+                name="twitter"
+                color={theme.colors.white}
                 className="arrow-next"
               />
             </Box>

@@ -46,10 +46,9 @@ import {
   LineHeightProps,
   LetterSpacingProps,
   MaxWidthProps,
-  DisplayProps, 
+  DisplayProps,
   PositionProps,
-  OverflowProps,
-  
+  OverflowProps
 } from 'styled-system'
 
 // Begin Component
@@ -76,7 +75,6 @@ type ElementProps = SpaceProps &
   LineHeightProps &
   LetterSpacingProps &
   OverflowProps
-
 
 export const Box = styled.div<ElementProps>`
   box-sizing: border-box;
@@ -154,10 +152,12 @@ AnimatedFlex.displayName = 'AnimatedFlex'
 // Button
 
 export const Button = styled.button<ElementProps>`
-  border-radius: 1000rem;
   border: none;
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: 1rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  cursor: pointer;
   ${space}
   ${width}
   ${color}

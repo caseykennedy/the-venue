@@ -39,7 +39,7 @@ export const HeroContainer = styled(Box)`
 
     .img {
       @media (min-width: calc(${theme.breakpoints[2]} + 1px)) {
-        height: 50vh;
+        height: 60vh;
       }
     }
   }

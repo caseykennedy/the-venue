@@ -33,23 +33,29 @@ export const Main = styled.main`
   }
 `
 
-export const Footer = styled.footer<{ color: string }>`
+export const Footer = styled.footer<{ color: string[] }>`
   position: fixed;
   width: ${theme.sidebarWidth.big};
   bottom: 0;
-  background: ${props => props.color};
-  color: ${props =>
-    readableColor(`${props.color}`, `${props.theme.colors.grey}`, '#c3c3c3')};
+  background: ${theme.colors.accent};
+  /* color: ${props =>
+    readableColor(`${props.color}`, `${props.theme.colors.grey}`, '#c3c3c3')}; */
   a {
-    color: ${props => readableColor(`${props.color}`)};
+    /* color: ${props => readableColor(`${props.color}`)}; */
     text-decoration: none;
     &:hover {
       color: ${theme.colors.primary};
     }
   }
+  
+  .ico {
+    margin-right: ${theme.space[2]};
+  }
+
   @media (max-width: ${theme.breakpoints[4]}) {
     width: ${theme.sidebarWidth.normal};
   }
+
   @media (max-width: ${theme.breakpoints[2]}) {
     position: relative;
     width: 100%;
