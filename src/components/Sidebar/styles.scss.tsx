@@ -5,7 +5,7 @@
 
 // Core
 import styled from 'styled-components'
-import { readableColor } from 'polished'
+import { readableColor, lighten } from 'polished'
 
 // Constants
 import theme from '../../../config/theme'

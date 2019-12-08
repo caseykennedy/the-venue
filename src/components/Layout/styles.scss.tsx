@@ -4,7 +4,7 @@
 //////////////////////////////////////////////////////////////////////
 
 // Core
-import styled from 'styled-components';
+import styled from 'styled-components'
 import { lighten } from 'polished'
 
 // Constants
@@ -48,10 +48,19 @@ export const Footer = styled.footer<{ color?: string[] }>`
       color: ${lighten(0.6, `${theme.colors.primary}`)};
     }
   }
-  
+
   .ico {
     margin-right: ${theme.space[2]};
     width: ${theme.space[4]};
+    cursor: pointer;
+
+    svg {
+      fill: ${theme.colors.white};
+
+      &:hover {
+        fill: ${lighten(0.3, `${theme.colors.primary}`)};
+      }
+    }
   }
 
   @media (max-width: ${theme.breakpoints[4]}) {

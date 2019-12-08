@@ -4,7 +4,7 @@
 //////////////////////////////////////////////////////////////////////
 
 // Core
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 // Constants
 import theme from '../../../config/theme'
@@ -26,7 +26,8 @@ const IconStyle = styled.span`
 
   svg {
     fill: ${props => (props.color ? props.color : theme.colors.black)};
+    transition: ${theme.transition.string};
   }
-`;
+`
 
-export default IconStyle;
+export default IconStyle
