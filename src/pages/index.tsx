@@ -185,7 +185,7 @@ const IndexPage: React.SFC<Props> = () => {
             justifyContent="flex-end"
             alignItems="flex-end"
             flexWrap="wrap"
-            css={{ minHeight: '60vh' }}
+            css={{ minHeight: '40vh' }}
           >
             <Box width={[1, 1, 1 / 2]} pr={[0, 0, 10]} pb={[4, 4, 0]}>
               <Heading as="h4" className="text--xl">
