@@ -80,6 +80,7 @@ export const Box = styled.div<ElementProps>`
   box-sizing: border-box;
   height: auto;
   transition: ${theme.transition.string};
+
   ${space}
   ${width}
   ${color}
@@ -96,6 +97,7 @@ Box.displayName = 'Box'
 
 export const AnimatedBox = styled(animated.div)<ElementProps>`
   box-sizing: border-box;
+
   ${space}
   ${width}
   ${color}
@@ -116,6 +118,7 @@ export const Flex = styled.div<ElementProps>`
   display: flex;
   box-sizing: border-box;
   height: auto;
+
   ${space}
   ${width}
   ${color}
@@ -134,6 +137,7 @@ Flex.displayName = 'Flex'
 
 export const AnimatedFlex = styled(animated.div)<ElementProps>`
   display: flex;
+
   ${space}
   ${color}
   ${flexWrap}
@@ -151,13 +155,14 @@ AnimatedFlex.displayName = 'AnimatedFlex'
 
 // Button
 
-export const Button = styled.button<ElementProps>`
+export const Btn = styled.button<ElementProps>`
   border: none;
-  font-weight: 700;
+  font-weight: inherit;
   font-size: 0.8em;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
   cursor: pointer;
+
   ${space}
   ${width}
   ${color}
@@ -165,7 +170,7 @@ export const Button = styled.button<ElementProps>`
   ${textAlign}
 `
 
-Button.displayName = 'Button'
+Btn.displayName = 'Btn'
 
 // Typography
 
@@ -173,6 +178,7 @@ export const Heading = styled.div<ElementProps>`
   box-sizing: border-box;
   display: block;
   transition: ${theme.transition.string};
+
   ${space}
   ${color}
   ${textAlign}
@@ -191,6 +197,7 @@ export const Text = styled.div<ElementProps>`
   box-sizing: border-box;
   display: block;
   transition: ${theme.transition.string};
+
   ${space}
   ${color}
   ${textAlign}

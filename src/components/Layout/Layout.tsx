@@ -53,9 +53,9 @@ const Layout = ({ children }: LayoutProps) => {
           <Main>{children}</Main>
           <Footer>
             <Box p={[4]}>
-              <Icon name="instagram" className="arrow-next" />
-              <Icon name="facebook" className="arrow-next" />
-              <Icon name="twitter" className="arrow-next" />
+              <Icon name="instagram" />
+              <Icon name="facebook" />
+              <Icon name="twitter" />
               <Text fontSize={1} mt={3}>
                 &copy; {Year()}
                 <br />

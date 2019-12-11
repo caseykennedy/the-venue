@@ -27,14 +27,9 @@ import 'slick-carousel/slick/slick.css'
 // Begin Component
 //////////////////////////////////////////////////////////////////////
 
-const defaultProps = {
-  src: 'hero.jpg',
-  altText: 'The Venue at Tahoe event space.'
-}
-
 type Props = {
-  slides: { src: string; altText: string }[]
-} & typeof defaultProps
+  slides: { [key: string]: string }[]
+}
 
 const Hero: React.SFC<Props> = ({ slides }) => {
   const settings = {
@@ -46,7 +41,7 @@ const Hero: React.SFC<Props> = ({ slides }) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 6000,
+    autoplaySpeed: 8000,
     adaptiveHeight: false,
     mobileFirst: true
   }
@@ -81,12 +76,11 @@ const Hero: React.SFC<Props> = ({ slides }) => {
 
 export default Hero
 
-Hero.defaultProps = defaultProps
-
 //////////////////////////////////////////////////////////////////////
 // End
 
-{/* <Grid columns="1">
+{
+  /* <Grid columns="1">
   <Cell>
     <Slider {...settings}>
       {slides.map((slide, index) => (
@@ -108,4 +102,5 @@ Hero.defaultProps = defaultProps
       ))}
     </Slider>
   </Cell>
-</Grid> */}
+</Grid> */
+}

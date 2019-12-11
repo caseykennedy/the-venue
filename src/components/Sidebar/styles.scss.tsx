@@ -41,7 +41,7 @@ export const SideBarInner = styled(Box)<{ bg: any }>`
     }
 
     svg {
-      fill: ${props => readableColor(`${props.bg}`)};
+      fill: ${p => readableColor(`${p.bg}`)};
       /* width: 7rem; */
       height: 4rem;
       width: 7rem;
@@ -57,9 +57,9 @@ export const SideBarInner = styled(Box)<{ bg: any }>`
     transform: translateY(-110%);
   }
 
-  .nav-container {
+  .nav__container {
     @media (min-width: calc(${theme.breakpoints[2]} + 1px)) {
-      height: calc(100vh - (${theme.root.space} * 1.5));
+      height: calc(100vh - (${theme.root.space} * 1.4));
     }
   }
 `
@@ -79,7 +79,7 @@ export const Nav = styled(Flex)<{ color: string }>`
   a {
     text-decoration: none;
     /* text-align: center; */
-    color: ${props => readableColor(`${props.color}`)};
+    color: ${p => readableColor(`${p.color}`)};
     font-size: ${p => p.theme.fontSizes[3]};
     line-height: 1.5;
 
@@ -88,7 +88,7 @@ export const Nav = styled(Flex)<{ color: string }>`
     &:hover,
     &:focus,
     &.navlink-active {
-      color: ${p => p.theme.colors.primary};
+      color: ${lighten(0.3, `${theme.colors.primary}`)};
     }
   }
 `

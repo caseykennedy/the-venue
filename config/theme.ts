@@ -9,7 +9,7 @@ interface ThemeShape {
     [key: string]: string
   }
   colors: {
-    [key: string]: string | string[]
+    [key: string]: string
   }
   space: string[]
   gutter: number[]
@@ -75,15 +75,6 @@ const theme: ThemeShape = {
 
     black: '#000000',
     white: '#ffffff',
-
-    shades: [
-      '#2e2e31',
-      '#7b7a7d',
-      '#a5a5a6',
-      '#bbbbbc',
-      '#d1d0d2',
-      '#e8e7e8'
-    ]
   },
 
   // Space
@@ -145,7 +136,7 @@ const theme: ThemeShape = {
   },
 
   transition: {
-    string: 'all 0.37s ease'
+    string: 'all 0.222s ease'
   },
 
   root: {

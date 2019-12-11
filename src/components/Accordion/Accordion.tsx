@@ -31,30 +31,12 @@ import theme from '../../../config/theme'
 //////////////////////////////////////////////////////////////////////
 
 type Props = {
-  children?: React.ReactNode
+  children: React.ReactNode
   title: string
-  chevronColor?: string
-  color?: string
-  colorActive?: string
-  borderColor?: string
-} & typeof defaultProps
-
-const defaultProps = {
-  chevronColor: 'white',
-  color: 'white',
-  colorActive: 'white',
-  borderColor: 'white'
-}
-
-interface QueryResult {
-  navigation: {
-    edges: {
-      node: {
-        name: string
-        link: string
-      }
-    }[]
-  }
+  color: string
+  chevronColor: string
+  borderColor: string
+  colorActive: string
 }
 
 const Accordion: React.SFC<Props> = ({
@@ -92,7 +74,7 @@ const Accordion: React.SFC<Props> = ({
           color={color}
           colorActive={colorActive}
         >
-          <Heading as="span" fontFamily="body" fontSize={3} pt={1} pb={2}>
+          <Heading as="span" fontFamily="body" fontSize={4} pt={1} pb={2}>
             {title}
           </Heading>
           <Carat
@@ -114,8 +96,6 @@ const Accordion: React.SFC<Props> = ({
 }
 
 export default Accordion
-
-Accordion.defaultProps = defaultProps
 
 //////////////////////////////////////////////////////////////////////
 // End

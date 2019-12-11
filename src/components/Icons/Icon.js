@@ -1,6 +1,7 @@
 // Icons Component:
 // https://fontawesome.com/icons/
 // Add custom icons via 'case'.
+// TODO: Convert to typescript
 
 // Imports
 //////////////////////////////////////////////////////////////////////

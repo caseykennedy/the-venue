@@ -91,7 +91,8 @@ const Typography = css`
     transition: ${theme.transition.string};
   }
   .text--xxxl {
-    font-size: ${theme.root.font.xxxl};
+    font-size: calc(${theme.root.font.xxxl} * 1.25);
+    line-height: calc(${theme.root.font.headingLineHeight} / 1.15);
   }
   h1,
   .text--xxl {

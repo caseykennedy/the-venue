@@ -8,9 +8,6 @@
 import React, { useState } from 'react'
 import { graphql, Link, useStaticQuery } from 'gatsby'
 
-// Tools
-// import { readableColor } from 'polished'
-
 // Utilities
 import useScrollWatch from '../../utils/useScrollWatch'
 
@@ -63,11 +60,11 @@ const Sidebar: React.SFC<Props> = ({ color }) => {
   const [shouldHideHeader, setShouldHideHeader] = useState(false)
   const [shouldShowBackground, setShouldShowBackground] = useState(false)
 
-  // Scroll settings
+  // scrollWatch settings
   const MINIMUM_SCROLL = 80
   const TIMEOUT_DELAY = 400
 
-  // Scroll watch
+  // scrollWatch hook to watch for page scroll
   useScrollWatch((callbackData: CallbackTypes) => {
     const { previousScrollTop, currentScrollTop } = callbackData
     const isScrolledDown = previousScrollTop < currentScrollTop
@@ -82,7 +79,7 @@ const Sidebar: React.SFC<Props> = ({ color }) => {
 
   // Scroll state styles
   const backgroundStyle = shouldShowBackground
-    ? theme.colors.secondary
+    ? theme.colors.background
     : theme.colors.primary
   const hiddenStyle = shouldHideHeader ? 'hidden' : ''
   return (
@@ -92,7 +89,7 @@ const Sidebar: React.SFC<Props> = ({ color }) => {
         flexDirection={['row', 'row', 'row', 'column']}
         alignItems={['center', 'center', 'center', 'flex-start']}
         justifyContent="space-between"
-        className="nav-container"
+        className="nav__container"
       >
         <Box width={1} className="logo">
           <Link to="/" aria-label="The Venue, Back to Home">

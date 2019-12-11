@@ -33,7 +33,7 @@ export const AccordionContainer = styled.div`
   }
 `
 
-export const AccordionToggle = styled.button<{ colorActive: string }>`
+export const AccordionToggle = styled.button<{ colorActive: string, color: string }>`
   align-items: center;
   background: transparent;
   color: ${p => p.color};

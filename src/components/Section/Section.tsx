@@ -23,10 +23,11 @@ interface Props {
   color?: string
   pt?: number | number[] | string
   pb?: number | number[] | string
+  id?: string
 }
 
-const Section: React.SFC<Props> = ({ children, bg, color, pt, pb }) => (
-  <Box as="section" width={1} bg={bg} color={color} pt={pt} pb={pb}>
+const Section: React.SFC<Props> = ({ children, bg, color, pt, pb, id }) => (
+  <Box as="section" width={1} bg={bg} color={color} pt={pt} pb={pb} id={id}>
     <Flex
       flexWrap="wrap"
       width={1}
