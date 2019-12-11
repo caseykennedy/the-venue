@@ -4,20 +4,18 @@
 //////////////////////////////////////////////////////////////////////
 
 // Core
-import * as React from 'react'
+import React, { useState } from 'react'
+
+// Libraries
 import useForm from 'react-hook-form'
-
-// Tools
-// import { readableColor } from 'polished'
-
-// Components
-import Logo from '../logo'
+import DatePicker from 'react-datepicker'
 
 // Styles
 import { Form } from './styles.scss'
+import 'react-datepicker/dist/react-datepicker.css'
 
 // Elements
-import { Box, Flex, Text, Heading } from '../../elements'
+import { Box } from '../../elements'
 import Button from '../../elements/Button'
 
 // Config
@@ -29,6 +27,7 @@ import theme from '../../../config/theme'
 type Props = {}
 
 const ContactForm: React.SFC<Props> = () => {
+  const [startDate, setStartDate] = useState(null)
   const { register, errors, handleSubmit } = useForm({
     mode: 'onChange'
   })
@@ -76,31 +75,22 @@ const ContactForm: React.SFC<Props> = () => {
           </Box>
           <Box width={[1, 1, 1 / 2]} className="form-group__box">
             <label htmlFor="date">
-              Name:{' '}
+              Date:{' '}
               <abbr title="required" aria-label="required">
                 *
               </abbr>
             </label>
 
-            <input
-              type="text"
-              name="date"
-              id="date"
-              placeholder="Event date"
-              ref={register({
-                required: 'Date is required'
-              })}
+            <DatePicker
+              showPopperArrow={false}
+              selected={startDate}
+              onChange={(date: any) => setStartDate(date)}
+              placeholderText="Event date"
             />
-
-            {errors.name && (
-              <div className="errors">
-                <span>{errors.name.message}</span>
-              </div>
-            )}
           </Box>
         </Box>
 
-        <Box width={1}>
+        <Box width={1} className="form-group">
           <label htmlFor="comments">Tell us about your event: </label>
           <textarea
             name="details"
@@ -147,7 +137,7 @@ const ContactForm: React.SFC<Props> = () => {
               name="phone"
               id="phone"
               placeholder="(___) ___-____"
-              pattern="[0-9]{3} [0-9]{3} [0-9]{4}"
+              pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
               ref={register({
                 maxLength: 12,
                 pattern: {

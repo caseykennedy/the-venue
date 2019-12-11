@@ -21,6 +21,7 @@ import ImgMatch from '../components/ImgMatch'
 import Accordion from '../components/Accordion'
 import Hero from '../components/Hero'
 import ContactForm from '../components/ContactForm'
+import Mountains from '../components/mountains'
 
 // Elements
 import { AnimatedBox, Box, Flex, Heading, Text } from '../elements'
@@ -54,7 +55,7 @@ const IndexPage: React.SFC<Props> = () => {
       <AnimatedBox style={pageAnimation}>
         <Hero slides={heroSlides} />
 
-        <Section pt={[6, 6, 8]} pb={[6, 6, 8]}>
+        <Section pb={0}>
           <Flex width={1} justifyContent="center" textAlign="center">
             <Box width={[9 / 10, 7 / 10, 6 / 10]}>
               <Heading as="h1">
@@ -66,6 +67,9 @@ const IndexPage: React.SFC<Props> = () => {
               </AnchorLink>
             </Box>
           </Flex>
+          <MountContainer>
+            <Mountains />
+          </MountContainer>
         </Section>
 
         {/* <Box as="section" bg="black" width={1}>
@@ -81,7 +85,7 @@ const IndexPage: React.SFC<Props> = () => {
             justifyContent="flex-end"
             alignItems="flex-end"
             flexWrap="wrap"
-            css={{ minHeight: '60vh' }}
+            css={{ minHeight: '40vh' }}
           >
             <Box width={[1, 1, 1 / 2]} pr={[0, 0, 10]}>
               <Heading as="h2">
@@ -252,6 +256,19 @@ const List = styled.ul`
       font-size: ${theme.fontSizes[5]};
       width: 33%;
     }
+  }
+`
+
+const MountContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 8rem;
+  overflow: hidden;
+
+  svg {
+    fill: #485763;
+    transform: scale(2);
   }
 `
 

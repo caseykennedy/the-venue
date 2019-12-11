@@ -94,7 +94,6 @@ export const Form = styled.form`
       }
     }
 
-    div,
     .form-group {
       display: flex;
       align-items: flex-start;
@@ -179,6 +178,10 @@ export const Form = styled.form`
     padding-bottom: 0;
     margin: 0;
     transition: ${theme.transition};
+  }
+
+  .react-datepicker-wrapper {
+    width: 100%;
   }
 `
 
