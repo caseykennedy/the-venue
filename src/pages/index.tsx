@@ -12,6 +12,7 @@ import { lighten } from 'polished'
 
 // Libraries
 import AnchorLink from 'react-anchor-link-smooth-scroll'
+import GoogleMapReact from 'google-map-react'
 
 // Components
 import Layout from '../components/Layout'
@@ -68,9 +69,9 @@ const IndexPage: React.SFC<Props> = () => {
               </AnchorLink>
             </Box>
           </Flex>
-          {/* <MountContainer>
+          <MountContainer>
             <Mountains />
-          </MountContainer> */}
+          </MountContainer>
         </Section>
 
         {/* <Box as="section" bg="black" width={1}>
@@ -184,21 +185,24 @@ const IndexPage: React.SFC<Props> = () => {
           >
             <Cell>
               <Box bg="black">
-                <ImgMatch
+                {/* <ImgMatch
                   src="map.png"
                   altText="PlayWell program state coordinator"
-                />
-                {/* <Box bg="black" style={{ height: '100vh', width: '100%' }}>
-                <GoogleMapReact
-                  bootstrapURLKeys={{
-                    key: 'AIzaSyBhFPTf9XXJ9x7SPjnyG7Vg8KaEPxKwBro'
-                  }}
-                  // defaultCenter={this.props.center}
-                  defaultZoom={11}
-                >
-                  <Box lat={59.955413} lng={30.337844} />
-                </GoogleMapReact>
-              </Box> */}
+                /> */}
+                <Box bg="black" style={{ height: '400px', width: '100%' }}>
+                  <GoogleMapReact
+                    bootstrapURLKeys={{
+                      key: 'AIzaSyBhFPTf9XXJ9x7SPjnyG7Vg8KaEPxKwBro'
+                    }}
+                    defaultCenter={{
+                      lat: 38.9611384,
+                      lng: -119.9425886
+                    }}
+                    defaultZoom={14}
+                  >
+                    <div />
+                  </GoogleMapReact>
+                </Box>
               </Box>
             </Cell>
             <Cell middle={false} center={false}>
@@ -240,12 +244,20 @@ const IndexPage: React.SFC<Props> = () => {
 
 export default IndexPage
 
+// IndexPage.defaultProps = {
+//   center: {
+//     lat: 59.95,
+//     lng: 30.33
+//   },
+//   zoom: 11
+// }
+
 const List = styled.ul`
   /* border-top: 1px solid ${theme.colors.text}; */
 
   li {
     /* border-bottom: 1px solid ${theme.colors.text}; */
-    color: #96a6b3;
+    /* color: #96a6b3; */
     font-size: ${theme.fontSizes[3]};
     display: inline-block;
     padding: ${theme.space[2]} 0;
