@@ -11,12 +11,16 @@ import { graphql, Link, useStaticQuery } from 'gatsby'
 // Utilities
 import useScrollWatch from '../../utils/useScrollWatch'
 
+// Libraries
+import AnchorLink from 'react-anchor-link-smooth-scroll'
+
 // Components
 import Logo from '../logo'
 import { Icon } from '../Icons'
 
 // Elements
 import { Box, Flex } from '../../elements'
+import Button from '../../elements/Button'
 
 // Theme
 import theme from '../../../config/theme'
@@ -98,9 +102,9 @@ const Sidebar: React.SFC<Props> = ({ color }) => {
         </Box>
         <Nav as="nav" color={color}>
           {data.navigation.edges.map(({ node: item }) => (
-            <Link to={item.link} key={item.name} activeClassName="nav--active">
+            <AnchorLink href={item.link} key={item.name}>
               {item.name}
-            </Link>
+            </AnchorLink>
           ))}
         </Nav>
       </Flex>

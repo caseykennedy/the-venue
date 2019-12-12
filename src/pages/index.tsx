@@ -22,6 +22,7 @@ import Accordion from '../components/Accordion'
 import Hero from '../components/Hero'
 import ContactForm from '../components/ContactForm'
 import Mountains from '../components/mountains'
+import Divider from '../elements/Divider'
 
 // Elements
 import { AnimatedBox, Box, Flex, Heading, Text } from '../elements'
@@ -55,21 +56,21 @@ const IndexPage: React.SFC<Props> = () => {
       <AnimatedBox style={pageAnimation}>
         <Hero slides={heroSlides} />
 
-        <Section pb={0}>
+        <Section id="welcome">
           <Flex width={1} justifyContent="center" textAlign="center">
             <Box width={[9 / 10, 7 / 10, 6 / 10]}>
               <Heading as="h1">
                 The perfect space for your event, private party or gathering in
                 Tahoe
               </Heading>
-              <AnchorLink href="#reserve">
+              <AnchorLink href="#enquiries">
                 <Button>Reserve the Venue</Button>
               </AnchorLink>
             </Box>
           </Flex>
-          <MountContainer>
+          {/* <MountContainer>
             <Mountains />
-          </MountContainer>
+          </MountContainer> */}
         </Section>
 
         {/* <Box as="section" bg="black" width={1}>
@@ -79,13 +80,12 @@ const IndexPage: React.SFC<Props> = () => {
           />
         </Box> */}
 
-        <Section bg="secondary">
+        <Section bg="secondary" pb={4}>
           <Flex
             width={1}
             justifyContent="flex-end"
             alignItems="flex-end"
             flexWrap="wrap"
-            css={{ minHeight: '40vh' }}
           >
             <Box width={[1, 1, 1 / 2]} pr={[0, 0, 10]}>
               <Heading as="h2">
@@ -111,9 +111,7 @@ const IndexPage: React.SFC<Props> = () => {
           </Flex>
         </Section>
 
-        {/* <Divider bg={['magenta', 'blue', 'primary']} py={'6vh'} /> */}
-
-        <Box as="section" px={theme.gutter} py={4}>
+        <Box as="section" px={theme.gutter} py={4} id="amenities">
           <Grid
             columns="repeat(auto-fit,minmax(120px,1fr))"
             gap={theme.space[4]}
@@ -179,30 +177,7 @@ const IndexPage: React.SFC<Props> = () => {
           />
         </Box> */}
 
-        <Section bg="secondary" id="reserve">
-          <Flex
-            width={1}
-            justifyContent="flex-end"
-            alignItems="flex-end"
-            flexWrap="wrap"
-            css={{ minHeight: '40vh' }}
-          >
-            <Box width={[1, 1, 1 / 2]} pr={[0, 0, 10]} pb={[4, 4, 0]}>
-              <Heading as="h4" className="text--xl">
-                We can help plan your party!
-              </Heading>
-              <Text>
-                Drop us a line if you'd like to book The Venue or see how we can
-                help you plan your event.
-              </Text>
-            </Box>
-            <Box width={[1, 1, 1 / 2]}>
-              <ContactForm />
-            </Box>
-          </Flex>
-        </Section>
-
-        <Box as="section" bg="primary" px={theme.gutter} py={4}>
+        <Box as="section" bg="primary" px={theme.gutter} py={4} id="directions">
           <Grid
             columns="repeat(auto-fit,minmax(306px,1fr))"
             gap={theme.space[4]}
@@ -234,6 +209,30 @@ const IndexPage: React.SFC<Props> = () => {
             </Cell>
           </Grid>
         </Box>
+
+        <Section bg="secondary" id="enquiries" pb={4}>
+          <Flex
+            width={1}
+            justifyContent="flex-end"
+            alignItems="flex-end"
+            flexWrap="wrap"
+          >
+            <Box width={[1, 1, 1 / 2]} pr={[0, 0, 10]} pb={[4, 4, 0]}>
+              <Heading as="h4" className="text--xl">
+                We can help plan your party!
+              </Heading>
+              <Text>
+                Drop us a line if you'd like to book The Venue or see how we can
+                help you plan your event.
+              </Text>
+            </Box>
+            <Box width={[1, 1, 1 / 2]}>
+              <ContactForm />
+            </Box>
+          </Flex>
+        </Section>
+
+        <Divider bg="primary" py={5} />
       </AnimatedBox>
     </Layout>
   )
