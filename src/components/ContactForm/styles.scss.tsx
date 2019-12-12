@@ -174,7 +174,7 @@ export const Form = styled.form`
     font-size: 0.9rem;
     font-weight: 500;
     color: red;
-    padding-top: calc(${theme.root.space} / 3);
+    padding-top: calc(${theme.root.space} / 6);
     padding-bottom: 0;
     margin: 0;
     transition: ${theme.transition};
