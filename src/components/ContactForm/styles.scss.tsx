@@ -59,7 +59,7 @@ export const Form = styled.form`
       }
 
       &::placeholder {
-        color: ${lighten(0.2, `${theme.colors.secondary}`)};
+        color: ${lighten(0.3, `${theme.colors.secondary}`)};
       }
     }
 

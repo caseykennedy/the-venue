@@ -178,7 +178,13 @@ const IndexPage: React.SFC<Props> = () => {
           />
         </Box> */}
 
-        <Box as="section" bg="primary" px={theme.gutter} py={4} id="directions">
+        <Box
+          as="section"
+          bg="primary"
+          px={theme.gutter}
+          py={4}
+          id="directions"
+        >
           <Grid
             columns="repeat(auto-fit,minmax(306px,1fr))"
             gap={theme.space[4]}
@@ -206,6 +212,9 @@ const IndexPage: React.SFC<Props> = () => {
               </Box>
             </Cell>
             <Cell middle={false} center={false}>
+              <Box pb={4}>
+                <Heading fontSize={7}>Getting here</Heading>
+              </Box>
               <Box>
                 <Heading fontSize={5}>31 US-50</Heading>
                 <Text as="p">Stateline, NV 89449</Text>
@@ -223,11 +232,11 @@ const IndexPage: React.SFC<Props> = () => {
           >
             <Box width={[1, 1, 1 / 2]} pr={[0, 0, 10]} pb={[4, 4, 0]}>
               <Heading as="h4" className="text--xl">
-                We can help plan your party!
+                Venue-curious?
               </Heading>
               <Text>
                 Drop us a line if you'd like to book The Venue or see how we can
-                help you plan your event.
+                help plan your event.
               </Text>
             </Box>
             <Box width={[1, 1, 1 / 2]}>

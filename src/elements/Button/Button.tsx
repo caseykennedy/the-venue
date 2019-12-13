@@ -18,11 +18,13 @@ import { ButtonStyles } from './styles.scss'
 
 interface Props {
   children: React.ReactNode
+  type: 'reset' | 'button' | 'submit' | undefined
+  value: string
 }
 
-const Button: React.SFC<Props> = ({ children }) => {
+const Button: React.SFC<Props> = ({ children, type, value }) => {
   return (
-    <ButtonStyles px={5} py={3}>
+    <ButtonStyles type={type} value={value} px={5} py={3}>
       {children}
     </ButtonStyles>
   )
