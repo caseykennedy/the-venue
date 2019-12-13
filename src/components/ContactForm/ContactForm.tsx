@@ -58,6 +58,7 @@ const ContactForm: React.SFC<Props> = () => {
               name="name"
               id="name"
               placeholder="Name"
+              required={true}
             />
           </Box>
           <Box width={[1, 1, 1 / 2]} className="form-group__box">
@@ -100,6 +101,7 @@ const ContactForm: React.SFC<Props> = () => {
               name="email"
               placeholder="Your email"
               type="text"
+              required={true}
             />
           </Box>
           <Box width={[1, 1, 1 / 2]} className="form-group__box">

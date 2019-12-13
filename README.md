@@ -1,4 +1,5 @@
 # The Venue at Tahoe Marketing Website
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a3c1fb1d-0121-457f-8fae-140ec5920575/deploy-status)](https://app.netlify.com/sites/lucid-swirles-e94cf1/deploys)
 
 ## Features
 
