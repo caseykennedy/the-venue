@@ -17,9 +17,9 @@ import { ButtonStyles } from './styles.scss'
 //////////////////////////////////////////////////////////////////////
 
 interface Props {
-  children: React.ReactNode
-  type: 'reset' | 'button' | 'submit' | undefined
-  value: string
+  children?: React.ReactNode
+  type?: 'reset' | 'button' | 'submit' | undefined
+  value?: string
 }
 
 const Button: React.SFC<Props> = ({ children, type, value }) => {

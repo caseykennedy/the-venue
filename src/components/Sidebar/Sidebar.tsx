@@ -1,5 +1,5 @@
 // Sidebar:
-// Main site navigation
+// Main site sidebar with logo and navigation
 
 // Imports
 //////////////////////////////////////////////////////////////////////
@@ -8,19 +8,17 @@
 import React, { useState } from 'react'
 import { graphql, Link, useStaticQuery } from 'gatsby'
 
-// Utilities
-import useScrollWatch from '../../utils/useScrollWatch'
-
 // Libraries
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 
+// Hooks
+import useScrollWatch from '../../hooks/useScrollWatch'
+
 // Components
 import Logo from '../logo'
-import { Icon } from '../Icons'
 
 // Elements
 import { Box, Flex } from '../../elements'
-import Button from '../../elements/Button'
 
 // Theme
 import theme from '../../../config/theme'
@@ -37,18 +35,13 @@ const defaultProps = {
 
 type Props = {
   color?: string
+  navData: {
+    node: {
+      name: string
+      link: string
+    }
+  }[]
 } & typeof defaultProps
-
-interface QueryResult {
-  navigation: {
-    edges: {
-      node: {
-        name: string
-        link: string
-      }
-    }[]
-  }
-}
 
 interface CallbackTypes {
   callbackData: any
@@ -56,10 +49,7 @@ interface CallbackTypes {
   currentScrollTop: number
 }
 
-const Sidebar: React.SFC<Props> = ({ color }) => {
-  // Navigation data hook
-  const data: QueryResult = useStaticQuery(query)
-
+const Sidebar: React.SFC<Props> = ({ color, navData }) => {
   // On scroll class change
   const [shouldHideHeader, setShouldHideHeader] = useState(false)
   const [shouldShowBackground, setShouldShowBackground] = useState(false)
@@ -101,7 +91,7 @@ const Sidebar: React.SFC<Props> = ({ color }) => {
           </Link>
         </Box>
         <Nav as="nav" color={color}>
-          {data.navigation.edges.map(({ node: item }) => (
+          {navData.map(({ node: item }) => (
             <AnchorLink href={item.link} key={item.name}>
               {item.name}
             </AnchorLink>
@@ -115,19 +105,6 @@ const Sidebar: React.SFC<Props> = ({ color }) => {
 export default Sidebar
 
 Sidebar.defaultProps = defaultProps
-
-const query = graphql`
-  query LayoutQuery {
-    navigation: allNavigationYaml {
-      edges {
-        node {
-          name
-          link
-        }
-      }
-    }
-  }
-`
 
 //////////////////////////////////////////////////////////////////////
 // End

@@ -3,14 +3,13 @@
 // Imports
 //////////////////////////////////////////////////////////////////////
 
-// Core
 import * as React from 'react'
-import styled from 'styled-components'
-import { animated, useSpring, config } from 'react-spring'
-import { Grid, Cell } from 'styled-css-grid'
-import { lighten } from 'polished'
 
 // Libraries
+import styled from 'styled-components'
+import { useSpring, config } from 'react-spring'
+import { Grid, Cell } from 'styled-css-grid'
+import { lighten } from 'polished'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import GoogleMapReact from 'google-map-react'
 
@@ -23,20 +22,17 @@ import Accordion from '../components/Accordion'
 import Hero from '../components/Hero'
 import ContactForm from '../components/ContactForm'
 import Mountains from '../components/mountains'
-import Divider from '../elements/Divider'
 
 // Elements
 import { AnimatedBox, Box, Flex, Heading, Text } from '../elements'
 import Button from '../elements/Button'
+import Divider from '../elements/Divider'
 
 // Constants
 import theme from '../../config/theme'
 
 // Begin
 //////////////////////////////////////////////////////////////////////
-
-// Types
-interface Props {}
 
 const AccordionProps = {
   chevronColor: theme.colors.text,
@@ -45,7 +41,7 @@ const AccordionProps = {
   borderColor: theme.colors.text
 }
 
-const IndexPage: React.SFC<Props> = () => {
+const IndexPage: React.SFC = () => {
   const pageAnimation = useSpring({
     config: config.slow,
     from: { opacity: 0 },

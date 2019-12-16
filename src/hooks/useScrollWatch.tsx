@@ -1,4 +1,4 @@
-// useScrollWatch utility function
+// useScrollWatch utility hook
 // Checks for window scroll position with throttling
 
 // Imports
