@@ -100,7 +100,7 @@ const ContactForm: React.SFC<Props> = () => {
             <input
               name="email"
               placeholder="Your email"
-              type="text"
+              type="email"
               required={true}
             />
           </Box>
@@ -131,7 +131,9 @@ const ContactForm: React.SFC<Props> = () => {
           </Box>
         </Box>
 
-        <Button type="submit" value="Submit Request">Submit Request</Button>
+        <Button type="submit" value="Submit Request">
+          Submit Request
+        </Button>
       </fieldset>
     </Form>
   )

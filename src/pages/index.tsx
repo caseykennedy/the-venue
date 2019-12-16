@@ -91,7 +91,7 @@ const IndexPage: React.SFC<Props> = () => {
             <Box width={[1, 1, 1 / 2]} pr={[0, 0, 10]}>
               <Heading as="h2">
                 Located on the second floor of the Laub Building in South Lake
-                Tahoe.
+                Tahoe
               </Heading>
               <Text as="p">
                 With our full bar and catering capabilites, we've got your party
@@ -213,7 +213,7 @@ const IndexPage: React.SFC<Props> = () => {
             </Cell>
             <Cell middle={false} center={false}>
               <Box pb={4}>
-                <Heading fontSize={7}>Getting here</Heading>
+                <Heading fontSize={5}>Getting here</Heading>
               </Box>
               <Box>
                 <Heading fontSize={5}>31 US-50</Heading>
@@ -232,7 +232,7 @@ const IndexPage: React.SFC<Props> = () => {
           >
             <Box width={[1, 1, 1 / 2]} pr={[0, 0, 10]} pb={[4, 4, 0]}>
               <Heading as="h4" className="text--xl">
-                Venue-curious?
+                Get in touch
               </Heading>
               <Text>
                 Drop us a line if you'd like to book The Venue or see how we can
