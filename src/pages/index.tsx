@@ -11,7 +11,6 @@ import { useSpring, config } from 'react-spring'
 import { Grid, Cell } from 'styled-css-grid'
 import { lighten } from 'polished'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
-import GoogleMapReact from 'google-map-react'
 
 // Components
 import Layout from '../components/Layout'
@@ -255,7 +254,7 @@ const IndexPage: React.SFC = () => {
                   altText="PlayWell program state coordinator"
                 /> */}
                 <Box bg="black" style={{ height: '400px', width: '100%' }}>
-                  <GoogleMapReact
+                  {/* <GoogleMapReact
                     bootstrapURLKeys={{
                       key: 'AIzaSyBhFPTf9XXJ9x7SPjnyG7Vg8KaEPxKwBro'
                     }}
@@ -266,7 +265,7 @@ const IndexPage: React.SFC = () => {
                     defaultZoom={14}
                   >
                     <div />
-                  </GoogleMapReact>
+                  </GoogleMapReact> */}
                 </Box>
               </Box>
             </Cell>
