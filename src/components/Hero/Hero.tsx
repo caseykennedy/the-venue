@@ -41,8 +41,8 @@ const Hero: React.SFC<Props> = ({ slides }) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 8000,
-    adaptiveHeight: false,
+    autoplaySpeed: 4000,
+    adaptiveHeight: true,
     mobileFirst: true
   }
   return (

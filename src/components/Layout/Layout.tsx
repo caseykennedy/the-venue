@@ -55,7 +55,7 @@ const Layout = ({ children }: LayoutProps) => {
             <Text fontSize={1} mt={3}>
               &copy; {Year()}
               <br />
-              Site by <a href="https://www.core37.agency">core37</a>
+              Site by <a href="//caseykennedy.me" target="_blank">ck</a>
             </Text>
           </Box>
         </Footer>

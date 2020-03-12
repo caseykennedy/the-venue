@@ -43,6 +43,7 @@ export const AccordionToggle = styled.button<{ colorActive: string, color: strin
   outline: none;
   padding: calc(1rem / 3) 0;
   transition: background-color 0.6s ease;
+  text-align: left;
 
   &:last-child {
     margin-bottom: 0;

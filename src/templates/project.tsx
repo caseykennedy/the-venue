@@ -5,7 +5,7 @@ import { transparentize, readableColor } from 'polished'
 import styled from 'styled-components'
 import { config, useSpring, animated } from 'react-spring'
 import Layout from '../components/Layout'
-import { Box, AnimatedBox, Button } from '../elements'
+import { Box, AnimatedBox, Btn } from '../elements'
 import SEO from '../components/SEO'
 
 const PBox = styled(AnimatedBox)`

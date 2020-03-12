@@ -54,8 +54,8 @@ const Typography = css`
     box-sizing: border-box;
   }
   ::selection {
-    color: white;
-    background-color: ${theme.colors.primary};
+    color: ${theme.colors.accent};
+    background-color: none;
   }
   html {
     font-size: 16px;
@@ -128,6 +128,7 @@ const Typography = css`
     }
   }
   a {
+    color: ${theme.colors.primary};
     transition: ${theme.transition.string};
     text-decoration: underline;
     

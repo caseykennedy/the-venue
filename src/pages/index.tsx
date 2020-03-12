@@ -55,10 +55,10 @@ const IndexPage: React.SFC = () => {
 
         <Section id="welcome">
           <Flex width={1} justifyContent="center" textAlign="center">
-            <Box width={[9 / 10, 7 / 10, 6 / 10]}>
+            <Box width={[9 / 10, 9 / 10, 7 / 10]}>
               <Heading as="h1">
                 The perfect space for your event, private party or gathering in
-                Tahoe
+                South Lake Tahoe.
               </Heading>
               <AnchorLink href="#enquiries">
                 <Button>Reserve the Venue</Button>
@@ -77,30 +77,99 @@ const IndexPage: React.SFC = () => {
           />
         </Box> */}
 
-        <Section bg="secondary" pb={4}>
+        <Section pt={0}>
           <Flex
             width={1}
-            justifyContent="flex-end"
-            alignItems="flex-end"
+            justifyContent="center"
+            alignItems="center"
             flexWrap="wrap"
           >
-            <Box width={[1, 1, 1 / 2]} pr={[0, 0, 10]}>
-              <Heading as="h2">
-                Located on the second floor of the Laub Building in South Lake
-                Tahoe
+            <Box width={[9 / 10, 9 / 10, 7 / 10]}>
+              <Heading as="h2" textAlign="center">
+                Next door to Montbleu, Harrah's and Harvey's, and across the
+                street from Hard Rock in downtown South Lake Tahoe.
               </Heading>
-              <Text as="p">
-                With our full bar and catering capabilites, we've got your party
-                covered. The Venue has a max capacity of 250 guests and offers
-                plenty of seating and room to boogie. We offer a full sound rig,
-                can help you find the perfect DJ and have staff on hand.
+              <Text as="p" textAlign="center">
+                With our full bar and catering capabilities, we've got your
+                party covered! The Venue is an elegant, indoor, 3,200 square-foot
+                venue with an immense 250 person capability. We offer a state of
+                the art sound system, mood lighting and a privatized staff ready
+                to assist. Our team of pros are here to help.
               </Text>
             </Box>
-            <Box width={[1, 1 / 2]}>
+          </Flex>
+        </Section>
+
+        <Box as="section" px={theme.gutter}>
+          <Grid
+            columns="repeat(auto-fit,minmax(120px,1fr))"
+            gap={theme.space[4]}
+          >
+            <Cell>
+              <Box bg="black">
+                <ImgMatch
+                  src="interior--d.jpg"
+                  altText="PlayWell program state coordinator"
+                />
+              </Box>
+            </Cell>
+            <Cell>
+              <Box bg="black">
+                <ImgMatch
+                  src="interior--a.jpg"
+                  altText="PlayWell program state coordinator"
+                />
+              </Box>
+            </Cell>
+            <Cell>
+              <Box bg="black">
+                <ImgMatch
+                  src="interior--b.jpg"
+                  altText="PlayWell program state coordinator"
+                />
+              </Box>
+            </Cell>
+            <Cell>
+              <Box bg="black">
+                <ImgMatch
+                  src="interior--c.jpg"
+                  altText="PlayWell program state coordinator"
+                />
+              </Box>
+            </Cell>
+          </Grid>
+        </Box>
+
+        <Section id="services">
+          <Flex flexWrap="wrap">
+            <Box width={[1, 1, 1 / 2]} pr={[0, 0, 6]} pb={[6, 6, 0]}>
+              <Heading as="h4" color={lighten(0.1, `${theme.colors.primary}`)}>
+                Services
+              </Heading>
               <Box width={1} mt={4}>
-                {accordionData.map((item, index) => (
+                {services.map((item, index) => (
                   <Accordion title={item.title} key={index} {...AccordionProps}>
-                    <Box pt={3}>{item.body}</Box>
+                    <Box pt={3}>
+                      <Text as="p" fontSize={3}>
+                        {item.body}
+                      </Text>
+                    </Box>
+                  </Accordion>
+                ))}
+              </Box>
+            </Box>
+            <Box width={[1, 1, 1 / 2]}>
+              <Heading as="h4" color={lighten(0.1, `${theme.colors.primary}`)}>
+                Frequently asked
+              </Heading>
+              <Box width={1} mt={4}>
+                {faq.map((item, index) => (
+                  <Accordion title={item.title} key={index} {...AccordionProps}>
+                    <Box pt={3}>
+                      <Text as="p" fontSize={3}>
+                        {item.body}
+                      </Text>
+                    </Box>
                   </Accordion>
                 ))}
               </Box>
@@ -108,7 +177,7 @@ const IndexPage: React.SFC = () => {
           </Flex>
         </Section>
 
-        <Box as="section" px={theme.gutter} py={4} id="amenities">
+        <Box as="section" px={theme.gutter} id="amenities">
           <Grid
             columns="repeat(auto-fit,minmax(120px,1fr))"
             gap={theme.space[4]}
@@ -174,13 +243,7 @@ const IndexPage: React.SFC = () => {
           />
         </Box> */}
 
-        <Box
-          as="section"
-          bg="primary"
-          px={theme.gutter}
-          py={4}
-          id="directions"
-        >
+        <Box as="section" bg="primary" px={theme.gutter} py={4} id="directions">
           <Grid
             columns="repeat(auto-fit,minmax(306px,1fr))"
             gap={theme.space[4]}
@@ -294,22 +357,65 @@ const heroSlides = [
   { src: 'hero-agate.jpg', altText: 'The Venue at Tahoe event space.' }
 ]
 
-// Accordion
-const accordionData = [
+// Services
+const services = [
   {
     title: 'Private Events',
     body:
-      'The Venue at Tahoe event space. A restaurant five and a half meters below the surface in Norway, exposing you to the wonders beneath the sea.'
+      "We offer customizable alcoholic beverage and food catering packages so The Venue becomes YOUR venue. Need a DJ? We've got you covered. Photographer/Videographer packages available as well."
+  },
+  {
+    title: 'After Parties',
+    body:
+      "The perfect After Party--No Curfew--go 24 hours if you'd like. Make it the pre-party--Walking distance from the local bars and clubs--upstairs from Xhale, Lucky Beaver, and Aleworx. Next door to Peak and Opal. Let us help you throw the party of your dreams!"
   },
   {
     title: 'Receptions',
     body:
-      'The Venue at Tahoe event space. A restaurant five and a half meters below the surface in Norway, exposing you to the wonders beneath the sea.'
+      'Host your destination wedding and get a free estimate based on your select options. Invite the extended family for the reception! Would it be too weird if it was the same place you threw your bachelorette/bachelor party!? Low group pricing. Free parking.'
   },
   {
     title: 'Gatherings',
     body:
-      'The Venue at Tahoe event space. A restaurant five and a half meters below the surface in Norway, exposing you to the wonders beneath the sea.'
+      'Need the perfect holiday party location? Have a corporate function that needs an all inclusive venue? Company brunch before a day on the slopes? Family Re-union? Come see what we have to offer at The Venue. '
+  }
+]
+
+// FAQ
+const faq = [
+  {
+    title: 'When did you open?',
+    body: "We are Lake Tahoe's newest (and best) venue, we just opened in 2020."
+  },
+  {
+    title: 'Do you have a liquor license?',
+    body: 'Yes.'
+  },
+  {
+    title: 'Can the Venue help us book rooms / lodging? ',
+    body: "Yes, we're here to help with whatever you need! just reach out."
+  },
+  {
+    title: 'How far are local clubs and nightlife?',
+    body:
+      'Right upstairs from Xhale, Lucky Beaver, and Aleworx. Next door to Peak and Opal.'
+  },
+  {
+    title: 'How far is the Venue from Heavenly Ski Resort?',
+    body: 'Just a five minute walk away.'
+  },
+  {
+    title: 'How much is parking?',
+    body: 'FREE!'
+  },
+  {
+    title: 'Is there a curfew?',
+    body: 'NOPE — party for 24 hours if you like.'
+  },
+  {
+    title: 'Can you help with staffing? ',
+    body:
+      'Photographers, DJs, bartenders, waitresses, security... whatever you need.'
   }
 ]
 

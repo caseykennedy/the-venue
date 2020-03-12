@@ -74,7 +74,7 @@ const Accordion: React.SFC<Props> = ({
           color={color}
           colorActive={colorActive}
         >
-          <Heading as="span" fontFamily="body" fontSize={4} pt={1} pb={2}>
+          <Heading as="span" fontFamily="body" fontSize={[3, 4, 5]} pt={1} pb={2}>
             {title}
           </Heading>
           <Carat
