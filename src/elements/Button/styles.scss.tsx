@@ -17,7 +17,7 @@ import { Btn } from '../../elements'
 //////////////////////////////////////////////////////////////////////
 
 export const ButtonStyles = styled(Btn)`
-  background: ${theme.colors.accent};
+  background: ${theme.colors.primary};
   color: ${theme.colors.white};
   transition: ${theme.transition.string};
 

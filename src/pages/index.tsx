@@ -30,17 +30,19 @@ import Divider from '../elements/Divider'
 // Constants
 import theme from '../../config/theme'
 
+import HeroReel from '../video/hero-reel--cmprsd.mp4'
+
 // Begin
 //////////////////////////////////////////////////////////////////////
 
 const AccordionProps = {
   chevronColor: theme.colors.text,
   color: theme.colors.text,
-  colorActive: theme.colors.text,
+  colorActive: theme.colors.primary,
   borderColor: theme.colors.text
 }
 
-const IndexPage: React.SFC = () => {
+const IndexPage: React.FC = () => {
   const pageAnimation = useSpring({
     config: config.slow,
     from: { opacity: 0 },
@@ -50,9 +52,13 @@ const IndexPage: React.SFC = () => {
     <Layout>
       <SEO />
       <AnimatedBox style={pageAnimation}>
-        <Hero slides={heroSlides} />
+        <Box>
+          <video autoPlay={true} muted={true} loop={true} width="100%">
+            <source src={HeroReel} type="video/mp4" />
+          </video>
+        </Box>
 
-        <Section id="welcome">
+        <Section pt={6} pb={6} id="welcome">
           <Flex width={1} justifyContent="center" textAlign="center">
             <Box width={[9 / 10, 9 / 10, 7 / 10]}>
               <Heading as="h1">
@@ -69,13 +75,6 @@ const IndexPage: React.SFC = () => {
           </MountContainer>
         </Section>
 
-        {/* <Box as="section" bg="black" width={1}>
-          <ImgMatch
-            src="dining-room.jpg"
-            altText="PlayWell program state coordinator"
-          />
-        </Box> */}
-
         <Section pt={0}>
           <Flex
             width={1}
@@ -90,10 +89,11 @@ const IndexPage: React.SFC = () => {
               </Heading>
               <Text as="p" textAlign="center">
                 With our full bar and catering capabilities, we've got your
-                party covered! The Venue is an elegant, indoor, 3,200 square-foot
-                venue with an immense 250 person capability. We offer a state of
-                the art sound system, mood lighting and a privatized staff ready
-                to assist. Our team of pros are here to help.
+                party covered! The Venue is an elegant, indoor, 3,200
+                square-foot venue with an immense 250 person capability. We
+                offer a state of the art sound system, mood lighting and a
+                privatized staff ready to assist. Our team of pros are here to
+                help.
               </Text>
             </Box>
           </Flex>
@@ -108,7 +108,7 @@ const IndexPage: React.SFC = () => {
               <Box bg="black">
                 <ImgMatch
                   src="interior--d.jpg"
-                  altText="PlayWell program state coordinator"
+                  altText="The Venue at South Lake Tahoe Party Venue"
                 />
               </Box>
             </Cell>
@@ -116,7 +116,7 @@ const IndexPage: React.SFC = () => {
               <Box bg="black">
                 <ImgMatch
                   src="interior--a.jpg"
-                  altText="PlayWell program state coordinator"
+                  altText="The Venue at South Lake Tahoe Party Venue"
                 />
               </Box>
             </Cell>
@@ -124,7 +124,7 @@ const IndexPage: React.SFC = () => {
               <Box bg="black">
                 <ImgMatch
                   src="interior--b.jpg"
-                  altText="PlayWell program state coordinator"
+                  altText="The Venue at South Lake Tahoe Party Venue"
                 />
               </Box>
             </Cell>
@@ -132,7 +132,7 @@ const IndexPage: React.SFC = () => {
               <Box bg="black">
                 <ImgMatch
                   src="interior--c.jpg"
-                  altText="PlayWell program state coordinator"
+                  altText="The Venue at South Lake Tahoe Party Venue"
                 />
               </Box>
             </Cell>
@@ -181,12 +181,11 @@ const IndexPage: React.SFC = () => {
             columns="repeat(auto-fit,minmax(120px,1fr))"
             gap={theme.space[4]}
           >
-            <Cell />
             <Cell>
               <Box bg="black">
                 <ImgMatch
                   src="cocktail-d.jpg"
-                  altText="PlayWell program state coordinator"
+                  altText="The Venue at South Lake Tahoe Party Venue"
                 />
               </Box>
             </Cell>
@@ -194,7 +193,7 @@ const IndexPage: React.SFC = () => {
               <Box bg="black">
                 <ImgMatch
                   src="cocktail-f.jpg"
-                  altText="PlayWell program state coordinator"
+                  altText="The Venue at South Lake Tahoe Party Venue"
                 />
               </Box>
             </Cell>
@@ -202,7 +201,7 @@ const IndexPage: React.SFC = () => {
               <Box bg="black">
                 <ImgMatch
                   src="cocktail-b.jpg"
-                  altText="PlayWell program state coordinator"
+                  altText="The Venue at South Lake Tahoe Party Venue"
                 />
               </Box>
             </Cell>
@@ -210,14 +209,14 @@ const IndexPage: React.SFC = () => {
               <Box bg="black">
                 <ImgMatch
                   src="cocktail-e.jpg"
-                  altText="PlayWell program state coordinator"
+                  altText="The Venue at South Lake Tahoe Party Venue"
                 />
               </Box>
             </Cell>
           </Grid>
         </Box>
 
-        <Section pb={3}>
+        <Section>
           <Box width={1}>
             <Heading as="h4" color={lighten(0.1, `${theme.colors.primary}`)}>
               Amenities
@@ -235,63 +234,50 @@ const IndexPage: React.SFC = () => {
           </Box>
         </Section>
 
-        {/* <Box as="section" bg="black" width={1}>
-          <ImgMatch
-            src="dining-room.jpg"
-            altText="PlayWell program state coordinator"
-          />
-        </Box> */}
+        <Hero slides={heroSlides} />
 
-        <Box as="section" bg="primary" px={theme.gutter} py={4} id="directions">
-          <Grid
-            columns="repeat(auto-fit,minmax(306px,1fr))"
-            gap={theme.space[4]}
-          >
-            <Cell>
-              <Box bg="black">
-                {/* <ImgMatch
-                  src="map.png"
-                  altText="PlayWell program state coordinator"
-                /> */}
-                <Box bg="black" style={{ height: '400px', width: '100%' }}>
-                  {/* <GoogleMapReact
-                    bootstrapURLKeys={{
-                      key: 'AIzaSyBhFPTf9XXJ9x7SPjnyG7Vg8KaEPxKwBro'
-                    }}
-                    defaultCenter={{
-                      lat: 38.9611384,
-                      lng: -119.9425886
-                    }}
-                    defaultZoom={14}
-                  >
-                    <div />
-                  </GoogleMapReact> */}
-                </Box>
-              </Box>
-            </Cell>
-            <Cell middle={false} center={false}>
-              <Box pb={4}>
-                <Heading fontSize={5}>Getting here</Heading>
-              </Box>
-              <Box>
-                <Heading fontSize={5}>31 US-50</Heading>
-                <Text as="p">Stateline, NV 89449</Text>
-              </Box>
-            </Cell>
-          </Grid>
-        </Box>
-
-        <Section bg="secondary" id="enquiries" pb={4}>
+        <Box py={[6, 6, 7]} px={4} id="directions">
           <Flex
             width={1}
             justifyContent="flex-end"
-            alignItems="flex-end"
+            alignItems="flex-start"
+            flexWrap="wrap"
+          >
+            <Box width={[1, 1, 1 / 2]} pr={[0, 0, 7]} pb={[6, 6, 0]}>
+              <Box pb={4}>
+                <Heading fontSize={5}>Getting here</Heading>
+              </Box>
+              <Box mb={6}>
+                <Heading fontSize={5} color="white">31 US-50</Heading>
+                <Text as="p" color="white">Stateline, NV 89449</Text>
+                <Text>Take HWY 50 to downtown South Lake Tahoe. We are located next to Montbleu</Text>
+              </Box>
+              <a href="https://goo.gl/maps/NGQeWiQS8NdNYvkx7" target="_blank">
+                <Button>Get Directions</Button>
+              </a>
+            </Box>
+            <Box width={[1, 1, 1 / 2]}>
+              <Box bg="black">
+                <a href="https://goo.gl/maps/NGQeWiQS8NdNYvkx7" target="_blank">
+                  <ImgMatch
+                    src="theVenue__map.png"
+                    altText="The Venue at South Lake Tahoe Party Venue"
+                  />
+                </a>
+              </Box>
+            </Box>
+          </Flex>
+        </Box>
+
+        <Section bg="secondary" id="enquiries" pt={4} pb={4}>
+          <Flex
+            width={1}
+            justifyContent="flex-end"
+            alignItems="flex-start"
             flexWrap="wrap"
           >
             <Box width={[1, 1, 1 / 2]} pr={[0, 0, 10]} pb={[4, 4, 0]}>
-              <Heading as="h4" className="text--xl">
-                Get in touch
-              </Heading>
+              <Heading as="h2">Get in touch</Heading>
               <Text>
                 Drop us a line if you'd like to book The Venue or see how we can
                 help plan your event.

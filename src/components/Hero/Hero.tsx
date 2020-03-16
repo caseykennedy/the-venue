@@ -1,5 +1,4 @@
-// Sidebar:
-// Main site navigation
+// Hero:
 
 // Imports
 //////////////////////////////////////////////////////////////////////
@@ -11,7 +10,6 @@ import Slider from 'react-slick'
 
 // Components
 import ImgMatch from '../ImgMatch'
-import { Icon } from '../Icons'
 
 // Elements
 import { Box, Flex } from '../../elements'
@@ -33,7 +31,7 @@ type Props = {
 
 const Hero: React.SFC<Props> = ({ slides }) => {
   const settings = {
-    arrows: true,
+    arrows: false,
     dots: false,
     fade: true,
     infinite: true,
@@ -53,18 +51,6 @@ const Hero: React.SFC<Props> = ({ slides }) => {
             {slides.map((slide, index) => (
               <Box key={index}>
                 <ImgMatch src={slide.src} altText={slide.altText} />
-                {/* <Box mt={3}>
-                  <Icon
-                    name="carat"
-                    color={theme.colors.primary}
-                    className="arrow-prev"
-                  />
-                  <Icon
-                    name="carat"
-                    color={theme.colors.primary}
-                    className="arrow-next"
-                  />
-                </Box> */}
               </Box>
             ))}
           </Slider>
@@ -78,29 +64,3 @@ export default Hero
 
 //////////////////////////////////////////////////////////////////////
 // End
-
-{
-  /* <Grid columns="1">
-  <Cell>
-    <Slider {...settings}>
-      {slides.map((slide, index) => (
-        <Box key={index}>
-          <ImgMatch src={slide.src} altText={slide.altText} />
-          <Box mt={3}>
-            <Icon
-              name="carat"
-              color={theme.colors.primary}
-              className="arrow-prev"
-            />
-            <Icon
-              name="carat"
-              color={theme.colors.primary}
-              className="arrow-next"
-            />
-          </Box>
-        </Box>
-      ))}
-    </Slider>
-  </Cell>
-</Grid> */
-}
