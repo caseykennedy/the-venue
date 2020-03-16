@@ -27,10 +27,10 @@ import { AnimatedBox, Box, Flex, Heading, Text } from '../elements'
 import Button from '../elements/Button'
 import Divider from '../elements/Divider'
 
+import HeroReel from '../video/hero-reel--cmprsd.mp4'
+
 // Constants
 import theme from '../../config/theme'
-
-import HeroReel from '../video/hero-reel--cmprsd.mp4'
 
 // Begin
 //////////////////////////////////////////////////////////////////////
@@ -52,11 +52,13 @@ const IndexPage: React.FC = () => {
     <Layout>
       <SEO />
       <AnimatedBox style={pageAnimation}>
-        <Box>
+        {/* <Box>
           <video autoPlay={true} muted={true} loop={true} width="100%">
             <source src={HeroReel} type="video/mp4" />
           </video>
-        </Box>
+        </Box> */}
+
+        <Hero slides={heroSlides} />
 
         <Section pt={6} pb={6} id="welcome">
           <Flex width={1} justifyContent="center" textAlign="center">
@@ -234,7 +236,7 @@ const IndexPage: React.FC = () => {
           </Box>
         </Section>
 
-        <Hero slides={heroSlides} />
+        {/* <Hero slides={heroSlides} /> */}
 
         <Box py={[6, 6, 7]} px={4} id="directions">
           <Flex
@@ -248,9 +250,16 @@ const IndexPage: React.FC = () => {
                 <Heading fontSize={5}>Getting here</Heading>
               </Box>
               <Box mb={6}>
-                <Heading fontSize={5} color="white">31 US-50</Heading>
-                <Text as="p" color="white">Stateline, NV 89449</Text>
-                <Text>Take HWY 50 to downtown South Lake Tahoe. We are located next to Montbleu</Text>
+                <Heading fontSize={5} color="white">
+                  31 US-50
+                </Heading>
+                <Text as="p" color="white">
+                  Stateline, NV 89449
+                </Text>
+                <Text>
+                  Take HWY 50 to downtown South Lake Tahoe. We are located next
+                  to Montbleu
+                </Text>
               </Box>
               <a href="https://goo.gl/maps/NGQeWiQS8NdNYvkx7" target="_blank">
                 <Button>Get Directions</Button>
