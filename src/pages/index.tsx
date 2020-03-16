@@ -27,8 +27,6 @@ import { AnimatedBox, Box, Flex, Heading, Text } from '../elements'
 import Button from '../elements/Button'
 import Divider from '../elements/Divider'
 
-import HeroReel from '../video/hero-reel--cmprsd.mp4'
-
 // Constants
 import theme from '../../config/theme'
 
