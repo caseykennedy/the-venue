@@ -244,9 +244,13 @@ const IndexPage: React.FC = () => {
             flexWrap="wrap"
           >
             <Box width={[1, 1, 1 / 2]} pr={[0, 0, 7]} pb={[6, 6, 0]}>
-              <Box pb={4}>
-                <Heading fontSize={5}>Getting here</Heading>
-              </Box>
+              <Heading
+                as="h4"
+                color={lighten(0.1, `${theme.colors.primary}`)}
+                pb={4}
+              >
+                Getting here
+              </Heading>
               <Box mb={6}>
                 <Heading fontSize={5} color="white">
                   31 US-50
@@ -284,7 +288,14 @@ const IndexPage: React.FC = () => {
             flexWrap="wrap"
           >
             <Box width={[1, 1, 1 / 2]} pr={[0, 0, 10]} pb={[4, 4, 0]}>
-              <Heading as="h2">Get in touch</Heading>
+              <Heading
+                as="h4"
+                color={lighten(0.1, `${theme.colors.primary}`)}
+                pb={4}
+              >
+                Enquiries
+              </Heading>
+              <Heading as="h2">Get in touch today and let's plan your perfect party.</Heading>
               <Text>
                 Drop us a line if you'd like to book The Venue or see how we can
                 help plan your event.
