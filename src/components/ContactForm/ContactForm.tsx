@@ -5,6 +5,7 @@
 
 // Core
 import React, { useState } from 'react'
+import { navigate } from 'gatsby-link'
 
 // Libraries
 import DatePicker from 'react-datepicker'
@@ -24,24 +25,44 @@ import theme from '../../../config/theme'
 // Begin Component
 //////////////////////////////////////////////////////////////////////
 
-type Props = {}
+function encode(data: any) {
+  return Object.keys(data)
+    .map(key => `${encodeURIComponent(key)} = ${encodeURIComponent(data[key])}`)
+    .join('&')
+}
 
-const ContactForm: React.SFC<Props> = () => {
+const ContactForm: React.FC = () => {
   const [startDate, setStartDate] = useState(null)
+  const [state, setState] = React.useState({})
+
+  const handleChange = (e: any) => {
+    setState({ ...state, [e.target.name]: e.target.value })
+  }
+
+  const handleSubmit = (e: any) => {
+    e.preventDefault()
+    const form = e.target
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({
+        'form-name': form.getAttribute('name'),
+        ...state
+      })
+    })
+      .then(() => navigate(form.getAttribute('action')))
+      .catch(error => alert(error))
+  }
   return (
     <Form
       name="Venue Contact"
       method="POST"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
-      // onSubmit={onSubmit}
+      onSubmit={handleSubmit}
     >
-      <input type="hidden" name="bot-field" />
-      <input
-        type="hidden"
-        name="form-name"
-        value="Venue Contact"
-      />
+      <input type="hidden" name="bot-field" onChange={handleChange} />
+      <input type="hidden" name="form-name" value="Venue Contact" />
 
       <fieldset>
         <Box width={1} className="form-group">
