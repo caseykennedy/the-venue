@@ -75,7 +75,9 @@ const Sidebar: React.SFC<Props> = ({ color, navData }) => {
   const backgroundStyle = shouldShowBackground
     ? theme.colors.background
     : theme.colors.primary
-  const hiddenStyle = shouldHideHeader ? 'hidden' : ''
+  const hiddenStyle = shouldHideHeader
+    ? theme.colors.primary
+    : theme.colors.primary
   return (
     <SideBarInner bg={backgroundStyle} as="aside" px={theme.gutter} py={[2, 4]}>
       <Flex

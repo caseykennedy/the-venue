@@ -30,7 +30,7 @@ const ContactForm: React.SFC<Props> = () => {
   const [startDate, setStartDate] = useState(null)
   return (
     <Form
-      name="the-venue-contact-form"
+      name="Venue Contact"
       method="POST"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
@@ -39,8 +39,8 @@ const ContactForm: React.SFC<Props> = () => {
       <input type="hidden" name="bot-field" />
       <input
         type="hidden"
-        name="the-venue-contact-form"
-        value="the-venue-contact-form"
+        name="form-name"
+        value="Venue Contact"
       />
 
       <fieldset>

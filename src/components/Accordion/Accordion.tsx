@@ -69,7 +69,7 @@ const Accordion: React.SFC<Props> = ({
     <AccordionContainer>
       <div className="accordion__inner">
         <AccordionToggle
-          className={`${setActive}`}
+          className={setActive}
           onClick={toggleAccordion}
           color={color}
           colorActive={colorActive}
@@ -79,7 +79,7 @@ const Accordion: React.SFC<Props> = ({
           </Heading>
           <Carat
             name="carat"
-            className={`${setRotate}`}
+            className={setRotate}
             chevronColor={chevronColor}
           />
         </AccordionToggle>

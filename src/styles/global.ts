@@ -26,6 +26,10 @@ const GlobalStyles = createGlobalStyle`
     border: 0;
     margin: 0;
     padding: 0;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 `
 
