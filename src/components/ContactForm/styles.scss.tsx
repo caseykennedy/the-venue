@@ -7,8 +7,6 @@
 import styled from 'styled-components'
 import { lighten, darken } from 'polished'
 
-import { Icon } from '../Icons'
-
 // Constants
 import theme from '../../../config/theme'
 
