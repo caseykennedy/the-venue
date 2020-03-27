@@ -20,8 +20,9 @@ import { Box, Flex } from '../../elements'
 
 // export const AccordionContainer = styled.div<{ chevronColor: string }>`
 
-export const Form = styled.form`
-  margin: 0 auto;
+export const ContactForm = styled.div`
+  .contact-form {
+    margin: 0 auto;
   width: 100%;
 
   legend {
@@ -182,6 +183,7 @@ export const Form = styled.form`
 
   .react-datepicker-wrapper {
     width: 100%;
+  }
   }
 `
 
