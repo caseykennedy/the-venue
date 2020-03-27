@@ -68,6 +68,7 @@ const ContactForm: React.FC = () => {
               selected={startDate}
               onChange={(date: any) => setStartDate(date)}
               placeholderText="Event date"
+              name="date"
             />
           </Box>
         </Box>
@@ -100,22 +101,6 @@ const ContactForm: React.FC = () => {
           </Box>
           <Box width={[1, 1, 1 / 2]} className="form-group__box">
             <label htmlFor="phone">Phone:</label>
-
-            {/* <input
-              type="tel"
-              name="phone"
-              id="phone"
-              placeholder="(___) ___-____"
-              pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
-              ref={register({
-                maxLength: 12,
-                pattern: {
-                  value: /[0-9]{3} [0-9]{3} [0-9]{4}/i,
-                  message: 'Invalid phone number'
-                }
-              })}
-            /> */}
-
             <input
               type="tel"
               name="phone"
