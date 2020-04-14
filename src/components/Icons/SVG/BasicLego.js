@@ -5,7 +5,7 @@
 import React from 'react';
 
 // Begin Component
-//////////////////////////////////////////////////////////////////////
+// ___________________________________________________________________
 
 const BasicLego = props => (
   <svg width="135px" height="90px" viewBox="0 0 135 90" version="1.1">

@@ -1,7 +1,7 @@
 // Typography styles
 
 // Imports
-//////////////////////////////////////////////////////////////////////
+// ___________________________________________________________________
 
 // Core
 import { css } from 'styled-components'
@@ -22,7 +22,7 @@ import AktivGroteskRegWoff from './fonts/AktivGroteskCdRg.woff'
 import AktivGroteskRegOtf from './fonts/AktivGroteskCdRg.otf'
 
 // Begin
-//////////////////////////////////////////////////////////////////////
+// ___________________________________________________________________
 
 const Typography = css`
   /* Aeonik Regular */
@@ -141,5 +141,5 @@ const Typography = css`
 
 export default Typography
 
-//////////////////////////////////////////////////////////////////////
+// ___________________________________________________________________
 // End

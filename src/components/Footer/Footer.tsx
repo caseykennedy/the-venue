@@ -2,7 +2,7 @@
 // Box and Flex layout components using Styled System
 
 // Imports
-//////////////////////////////////////////////////////////////////////
+// ___________________________________________________________________
 
 // Core
 import * as React from 'react'
@@ -17,7 +17,7 @@ import { Box, Flex, Text } from '../../elements'
 import theme from '../../../config/theme'
 
 // Begin Component
-//////////////////////////////////////////////////////////////////////
+// ___________________________________________________________________
 
 interface Props {}
 

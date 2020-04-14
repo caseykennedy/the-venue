@@ -5,7 +5,7 @@
 import React from 'react';
 
 // Begin Component
-//////////////////////////////////////////////////////////////////////
+// ___________________________________________________________________
 
 const Twitter = () => (
   <svg version="1.1" width="20" height="20" viewBox="0 0 20 20" xmlSpace="preserve">

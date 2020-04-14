@@ -1,15 +1,13 @@
 // Contact form:
 
 // Imports
-//////////////////////////////////////////////////////////////////////
+// ___________________________________________________________________
 
 // Core
 import React, { useState } from 'react'
-import { navigate } from 'gatsby-link'
 
 // Libraries
 import DatePicker from 'react-datepicker'
-// import useForm from 'react-hook-form'
 
 // Styles
 import { Form } from './styles.scss'
@@ -23,7 +21,7 @@ import Button from '../../elements/Button'
 import theme from '../../../config/theme'
 
 // Begin Component
-//////////////////////////////////////////////////////////////////////
+// ___________________________________________________________________
 
 const ContactForm: React.FC = () => {
   const [startDate, setStartDate] = useState(null)
@@ -120,5 +118,5 @@ const ContactForm: React.FC = () => {
 
 export default ContactForm
 
-//////////////////////////////////////////////////////////////////////
+// ___________________________________________________________________
 // End

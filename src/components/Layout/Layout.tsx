@@ -2,7 +2,7 @@
 // TODO: create hook for siteMetaData
 
 // Imports
-//////////////////////////////////////////////////////////////////////
+// ___________________________________________________________________
 
 // Core
 import * as React from 'react'
@@ -28,7 +28,7 @@ import GlobalStyles from '../../styles/global'
 import { Wrapper, Main, Footer } from './styles.scss'
 
 // Begin
-//////////////////////////////////////////////////////////////////////
+// ___________________________________________________________________
 
 const Year = () => {
   return new Date().getFullYear()
@@ -69,7 +69,7 @@ const Layout = ({ children }: LayoutProps) => {
 
 export default Layout
 
-//////////////////////////////////////////////////////////////////////
+// ___________________________________________________________________
 // End
 
 // interface RenderData {

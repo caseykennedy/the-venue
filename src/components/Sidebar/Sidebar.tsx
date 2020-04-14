@@ -2,7 +2,7 @@
 // Main site sidebar with logo and navigation
 
 // Imports
-//////////////////////////////////////////////////////////////////////
+// ___________________________________________________________________
 
 // Core
 import React, { useState } from 'react'
@@ -27,7 +27,7 @@ import theme from '../../../config/theme'
 import { SideBarInner, Nav } from './styles.scss'
 
 // Begin Component
-//////////////////////////////////////////////////////////////////////
+// ___________________________________________________________________
 
 const defaultProps = {
   color: '#ffffff'
@@ -108,5 +108,5 @@ export default Sidebar
 
 Sidebar.defaultProps = defaultProps
 
-//////////////////////////////////////////////////////////////////////
+// ___________________________________________________________________
 // End

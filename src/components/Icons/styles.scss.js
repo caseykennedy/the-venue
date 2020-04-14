@@ -1,7 +1,7 @@
 // Icon Component Styles:
 
 // Imports
-//////////////////////////////////////////////////////////////////////
+// ___________________________________________________________________
 
 // Core
 import styled from 'styled-components'
@@ -10,7 +10,7 @@ import styled from 'styled-components'
 import theme from '../../../config/theme'
 
 // Begin Styles
-//////////////////////////////////////////////////////////////////////
+// ___________________________________________________________________
 
 const IconStyle = styled.span`
   font-size: 1rem;

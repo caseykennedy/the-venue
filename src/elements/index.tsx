@@ -2,7 +2,7 @@
 // Box and Flex layout components using Styled System
 
 // Imports
-//////////////////////////////////////////////////////////////////////
+// ___________________________________________________________________
 
 import styled from 'styled-components'
 import { animated } from 'react-spring'
@@ -52,7 +52,7 @@ import {
 } from 'styled-system'
 
 // Begin Component
-//////////////////////////////////////////////////////////////////////
+// ___________________________________________________________________
 
 // Box
 
@@ -212,5 +212,5 @@ export const Text = styled.div<ElementProps>`
 
 Box.displayName = 'Text'
 
-//////////////////////////////////////////////////////////////////////
+// ___________________________________________________________________
 // End Component

@@ -2,14 +2,14 @@
 // Checks for window scroll position with throttling
 
 // Imports
-//////////////////////////////////////////////////////////////////////
+// ___________________________________________________________________
 
 // Core
 import { useEffect, useState } from 'react'
 import { throttle } from 'lodash'
 
 // Begin
-//////////////////////////////////////////////////////////////////////
+// ___________________________________________________________________
 
 function useScrollWatch(callback: any) {
   const [, setScrollPosition] = useState(0)
@@ -39,5 +39,5 @@ function useScrollWatch(callback: any) {
 
 export default useScrollWatch
 
-//////////////////////////////////////////////////////////////////////
+// ___________________________________________________________________
 // End
